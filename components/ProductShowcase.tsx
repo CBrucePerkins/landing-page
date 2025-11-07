@@ -1,6 +1,6 @@
 "use client";
 
-import ProductImage from "@/public/assests/Product Image.png";
+import Dashboard from "@/public/assests/Dashboard.png";
 import Pyramid from "@/public/assests/pyramid.png";
 import Tube from "@/public/assests/tube.png";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -31,13 +31,11 @@ const ProductShowcase = () => {
           Boost your productivity
         </div>
         <div className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
-          A more effective way to track progress
+          The all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.
         </div>
 
         <div className="text-center text-lg mb-8 md:text-xl">
-          Effortlessly turn your ideas into a fully functional, responsive,
-          no-code SaaS website in just minutes with the set of free components
-          for Framer.
+          MusiOS helps private teachers and music schools stay organized, save admin time, and help students practice more effectively.
         </div>
       </div>
       <div className="relative ">
@@ -49,7 +47,7 @@ const ProductShowcase = () => {
             translateY: translateY,
           }}
         />
-        <Image src={ProductImage} alt="Product Image" className="px-1" />
+        <Image src={Dashboard} alt="Product Image" className="px-1" />
         <motion.img
           src={Tube.src}
           alt="Tube Image"

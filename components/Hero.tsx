@@ -21,42 +21,49 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="p-8 pb-16 md:p-10 lg:p-20 font-medium bg-gradient-to-tr from-[#001E80] via-[#e4eaff]  overflow-x-clip md:items-center gap-3"
+      className="p-8 pb-16 md:p-10 lg:p-20 font-medium bg-gradient-to-tr from-[#001E80] via-[#e4eaff] overflow-x-clip md:items-center gap-3"
     >
       <div className="md:flex items-center justify-center gap-16">
         <div className="md:w-[478px]">
+          {/* Version or product tag */}
           <div className="border-2 w-fit p-0.5 px-1 lg:text-lg rounded-lg border-slate-400/80">
-            Version 2.0 is here
-          </div>
-          <div className="text-5xl md:text-7xl font-black my-7 bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text tracking-tighter">
-            Pathway to productivity
-          </div>
-          <div className="text-xl lg:text-2xl tracking-tighter opacity-85">
-            Celebrate the joy of accomplishment with an app designed to track
-            your progress, motivate your efforts, and celebrate your successes.
+            Built for music teachers
           </div>
 
+          {/* Headline */}
+          <div className="text-5xl md:text-7xl font-black my-7 bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text tracking-tighter">
+            Teach music, not admin.
+          </div>
+
+          {/* Subheadline */}
+          <div className="text-xl lg:text-2xl tracking-tighter opacity-85">
+            MusiOS helps you manage students, lessons, practice sheets, and payments —
+            all in one place. Save hours each week and keep your studio running smoothly.
+          </div>
+
+          {/* CTA Buttons */}
           <div className="flex items-center gap-3 mt-6 text-lg">
-            <Button text="Get for free" />
-            <div className="cursor-pointer hover:underline">
-              Learn more
-              <FaArrowRight className="h-3 w-3 inline ml-2" />
+            <Button text="Start Free Trial" />
+            <div className="cursor-pointer hover:underline flex items-center gap-2">
+              Learn How It Works
+              <FaArrowRight className="h-3 w-3 inline" />
             </div>
           </div>
         </div>
 
+        {/* Hero Image Section */}
         <div className="pt-12 md:pt-0 md:h-[648px] md:w-[648px] relative">
           <motion.img
             src={Cylinder.src}
-            alt="Cylinder"
-            className=" hidden md:block md:absolute -left-8 -top-8"
+            alt="Decorative cylinder shape"
+            className="hidden md:block md:absolute -left-8 -top-8"
             style={{
               translateY: translateY,
             }}
           />
           <motion.img
             src={HeroImage.src}
-            alt="Hero Image"
+            alt="MusiOS dashboard preview"
             className="md:absolute md:h-full md:w-auto md:max-w-none"
             animate={{
               translateY: [-30, 30],
@@ -70,8 +77,8 @@ const Hero = () => {
           />
           <motion.img
             src={HalfTorus.src}
-            alt="HalfTorus"
-            className=" hidden lg:block md:absolute left-[400px] top-[500px]"
+            alt="Decorative half torus shape"
+            className="hidden lg:block md:absolute left-[400px] top-[500px]"
             style={{
               translateY: translateY,
             }}
