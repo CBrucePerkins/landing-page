@@ -7,9 +7,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { GoBell, GoGoal } from "react-icons/go";
-import { LuLeaf } from "react-icons/lu";
-import { MdLockOutline } from "react-icons/md";
+import { GoCalendar, GoPerson, GoCreditCard } from "react-icons/go";
+import { MdLibraryMusic } from "react-icons/md";
 
 const ProductShowcase = () => {
   const sectionRef = useRef(null);
@@ -26,31 +25,36 @@ const ProductShowcase = () => {
       ref={sectionRef}
       className="bg-gradient-to-t from-[#acbae8] to-white flex flex-col items-center overflow-x-hidden pb-24"
     >
+      {/* Header Section */}
       <div className="flex flex-col items-center font-medium mt-24 px-8 mx-auto md:w-[550px] lg:w-[630px]">
         <div className="border-2 w-fit p-0.5 px-3 text-sm rounded-xl border-slate-300/80">
-          Boost your productivity
+          Powerful tools for music teachers
         </div>
+
         <div className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
-          The all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.
+          Manage students, lessons, practice, and payments — all in one place.
         </div>
 
         <div className="text-center text-lg mb-8 md:text-xl">
-          MusiOS helps private teachers and music schools stay organized, save admin time, and help students practice more effectively.
+          MusiOS helps private teachers and music schools stay organized,
+          automate admin work, and help students practice more effectively.
         </div>
       </div>
-      <div className="relative ">
+
+      {/* Product Image Showcase */}
+      <div className="relative">
         <motion.img
           src={Pyramid.src}
-          alt="Pyramid Image"
+          alt="Decorative pyramid shape"
           className="absolute -right-24 -top-20 w-72 h-72 hidden md:block"
           style={{
             translateY: translateY,
           }}
         />
-        <Image src={Dashboard} alt="Product Image" className="px-1" />
+        <Image src={Dashboard} alt="MusiOS Dashboard Preview" className="px-1" />
         <motion.img
           src={Tube.src}
-          alt="Tube Image"
+          alt="Decorative tube shape"
           className="absolute w-72 h-72 top-64 -left-28 hidden md:block"
           style={{
             translateY: translateY,
@@ -58,47 +62,56 @@ const ProductShowcase = () => {
         />
       </div>
 
+      {/* Feature Cards */}
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-20 max-w-[1400px] lg:px-28">
+        {/* Feature 1: Students & Classes */}
         <div className="mt-16">
-          <LuLeaf className="text-2xl mb-3" />
-          <div className="font-bold text-2xl">Integration ecosystem</div>
+          <GoPerson className="text-2xl mb-3" />
+          <div className="font-bold text-2xl">Students & Classes</div>
           <div className="text-lg my-2">
-            Track your progress and motivate your efforts everyday.
+            Onboard students and organize them into classes. Track lesson history,
+            progress, and details — all from one intuitive dashboard.
           </div>
-          <div className="text-lg font-medium">
+          <div className="text-lg font-medium cursor-pointer hover:underline">
             Learn more <FaArrowRight className="inline h-3 w-3" />
           </div>
         </div>
 
+        {/* Feature 2: Smart Scheduling */}
         <div className="mt-16">
-          <GoGoal className="text-2xl mb-3" />
-          <div className="font-bold text-2xl">Goal setting and tracking</div>
+          <GoCalendar className="text-2xl mb-3" />
+          <div className="font-bold text-2xl">Smart Scheduling</div>
           <div className="text-lg my-2">
-            Set and track goals with manageable task breakdowns.
+            Manage recurring lessons and one-off appointments with ease.
+            Automated reminders keep teachers and students on schedule.
           </div>
-          <div className="text-lg font-medium">
+          <div className="text-lg font-medium cursor-pointer hover:underline">
             Learn more <FaArrowRight className="inline h-3 w-3" />
           </div>
         </div>
 
+        {/* Feature 3: Practice Sheets & Materials */}
         <div className="mt-16">
-          <MdLockOutline className="text-2xl mb-3" />
-          <div className="font-bold text-2xl">Secure data encryption</div>
+          <MdLibraryMusic className="text-2xl mb-3" />
+          <div className="font-bold text-2xl">Practice Sheets & Materials</div>
           <div className="text-lg my-2">
-            Ensure data safety with top-tier encryption.
+            Upload sheet music, videos, and audio files. Assign practice items
+            and let students log daily practice time — all trackable in one place.
           </div>
-          <div className="text-lg font-medium">
+          <div className="text-lg font-medium cursor-pointer hover:underline">
             Learn more <FaArrowRight className="inline h-3 w-3" />
           </div>
         </div>
 
+        {/* Feature 4: Payments with Stripe */}
         <div className="mt-16">
-          <GoBell className="text-2xl mb-3" />
-          <div className="font-bold text-2xl">Customizable notifications</div>
+          <GoCreditCard className="text-2xl mb-3" />
+          <div className="font-bold text-2xl">Payments Made Simple</div>
           <div className="text-lg my-2">
-            Get alerts on tasks and deadlines that matter most.
+            Get paid faster with Stripe Connect. Send payment requests, manage
+            transactions, and receive payments directly from students.
           </div>
-          <div className="text-lg font-medium">
+          <div className="text-lg font-medium cursor-pointer hover:underline">
             Learn more <FaArrowRight className="inline h-3 w-3" />
           </div>
         </div>
