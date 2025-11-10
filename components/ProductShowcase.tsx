@@ -1,8 +1,8 @@
 "use client";
 
 import Dashboard from "@/public/assests/Dashboard.png";
-import Pyramid from "@/public/assests/pyramid.png";
-import Tube from "@/public/assests/tube.png";
+import Pyramid from "@/public/assests/treble-clef.png";
+import Tube from "@/public/assests/bass-clef.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
