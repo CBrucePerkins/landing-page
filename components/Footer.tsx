@@ -15,6 +15,7 @@ const Footer = () => {
     <div className="flex flex-col md:flex-row bg-black text-white p-16 gap-8 justify-between md:px-20 xl:px-44">
       <div className="flex flex-col gap-8 text-gray-300/85 max-w-[300px]">
         <Image src={Logo} alt="Logo" className="cursor-pointer" />
+        {/* 
         <div>
           This website is developed by{" "}
           <div className="font-semibold text-white hover:underline text-lg">
@@ -31,6 +32,7 @@ const Footer = () => {
           <FaTiktok className="hover:scale-125" />
           <FaYoutube className="hover:scale-125" />
         </div>
+      */}
       </div>
       <div className="flex flex-col gap-4">
         <div className="font-bold text-lg">Product</div>

@@ -7,6 +7,7 @@ import Pricing from "@/components/Pricing";
 import ProductCard from "@/components/ProductCard";
 import ProductShowcase from "@/components/ProductShowcase";
 import Testimonials from "@/components/Testimonials";
+import ProblemSection from "@/components/ProblemSection";
 
 export default function Home() {
   return (
@@ -14,10 +15,11 @@ export default function Home() {
       <Header />
       <Hero/>
       <BrandSlide/>
+      <ProblemSection/>
       <ProductShowcase/>
       <ProductCard/>
       <Pricing/>
-      <Testimonials/>
+      { /* <Testimonials/> */ }
       <CTA/>
       <Footer/>
     </div>
