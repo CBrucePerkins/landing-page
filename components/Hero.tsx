@@ -17,7 +17,7 @@ const Hero = () => {
   });
 
   const translateY = useTransform(scrollYProgress, [0, 1], [100, -50]);
-  const translateX = useTransform(scrollYProgress, [0, 1], [1800, -2000]);
+  const translateX = useTransform(scrollYProgress, [0, 1], [1500, -2000]);
 
   return (
     <section
