@@ -51,9 +51,9 @@ const Modal = ({ isOpen, onClose, feature }) => {
             </div>
 
             {/* Image */}
-            {feature.image && (
+            {feature.image?.src && (
               <img
-                src={feature.image}
+                src={feature.image.src}
                 alt={feature.title}
                 className="mt-6 w-full rounded-xl shadow-lg"
               />
