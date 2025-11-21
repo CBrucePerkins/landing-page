@@ -60,10 +60,12 @@ const Modal = ({ isOpen, onClose, feature }) => {
             )}
 
             {/* Additional content */}
-            {feature.details && (
-              <div className="mt-6 text-gray-800 text-md leading-relaxed">
-                {feature.details}
-              </div>
+            {feature.details && Array.isArray(feature.details) && (
+              <ul className="mt-6 text-gray-800 text-md leading-relaxed list-disc pl-6">
+                {feature.details.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             )}
           </motion.div>
         </motion.div>
