@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={twMerge(dmSans.className, "antialiased")}>
         <div className="bg-black text-white p-3 text-sm text-center cursor-pointer">
           <span className="hidden sm:inline pr-2 opacity-80">
-            Streamline your workflow and boost your productivity.
+            The all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.
           </span>
           <span className="pr-1">
             Get started for free <FaArrowRight className="inline h-2 w-2" />

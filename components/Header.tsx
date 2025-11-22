@@ -11,23 +11,21 @@ const Header = () => {
       <nav className="hidden md:block">
         <ul className="flex gap-6 items-center">
           <li>
-            <a href="#">About</a>
+            <a href="#hero">Home</a>
           </li>
           <li>
-            <a href="#">Features</a>
+            <a href="#product-showcase">Features</a>
           </li>
           <li>
-            <a href="#">Customers</a>
+            <a href="#product-card">Getting Started</a>
           </li>
           <li>
-            <a href="#">Updates</a>
-          </li>
-          <li>
-            <a href="#">Help</a>
+            <a href="#pricing">Pricing</a>
           </li>
           <Button text="Get for free" />
         </ul>
       </nav>
+
     </header>
   );
 };

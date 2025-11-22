@@ -13,15 +13,32 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Hero/>
-      <BrandSlide/>
-      <ProblemSection/>
-      <ProductShowcase/>
-      <ProductCard/>
-      <Pricing/>
-      { /* <Testimonials/> */ }
-      <CTA/>
-      <Footer/>
+
+      <section id="hero">
+        <Hero />
+      </section>
+
+      <section id="problem">
+        <ProblemSection />
+      </section>
+
+      <section id="product-showcase">
+        <ProductShowcase />
+      </section>
+
+      <section id="product-card">
+        <ProductCard />
+      </section>
+
+      <section id="pricing">
+        <Pricing />
+      </section>
+
+      <section id="cta">
+        <CTA />
+      </section>
+
+      <Footer />
     </div>
   );
 }
