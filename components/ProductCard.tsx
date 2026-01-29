@@ -4,9 +4,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
-import StudioSetup from "@/public/assests/StudioSetup.gif";
-import PracticeSheet from "@/public/assests/PracticerSheet.gif";
-import PaymentTracking from "@/public/assests/Payments.gif";
+import StudioSetup from "@/public/assets/StudioSetup.gif";
+import PracticeSheet from "@/public/assets/PracticerSheet.gif";
+import PaymentTracking from "@/public/assets/Payments.gif";
+import Messages from "@/public/assets/Messages-gif.gif";
 
 const ProductCard = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -32,6 +33,13 @@ const ProductCard = () => {
       description:
         "Monitor student progress, review practice reports, and receive payments directly — all from your MusiOS dashboard.",
       image: PaymentTracking,
+    },
+    {
+      id: 4,
+      title: "Send messages easily",
+      description:
+        "Send e-mail or SMS messages to individual students or entire classes directly from the platform.",
+      image: Messages,
     },
   ];
 

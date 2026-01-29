@@ -2,8 +2,8 @@
 
 import { FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
-import Star from "@/public/assests/emojistar 1.png";
-import Helix from "@/public/assests/helix2 1.png";
+import Star from "@/public/assets/emojistar 1.png";
+import Helix from "@/public/assets/helix2 1.png";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 

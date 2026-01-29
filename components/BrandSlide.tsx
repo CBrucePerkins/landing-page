@@ -1,11 +1,11 @@
 "use client";
 
-import logo_acme from "@/public/assests/logo-acme.png";
-import logo_apex from "@/public/assests/logo-apex.png";
-import logo_celestial from "@/public/assests/logo-celestial.png";
-import logo_echo from "@/public/assests/logo-echo.png";
-import logo_pulse from "@/public/assests/logo-pulse.png";
-import logo_quantum from "@/public/assests/logo-quantum.png";
+import logo_acme from "@/public/assets/logo-acme.png";
+import logo_apex from "@/public/assets/logo-apex.png";
+import logo_celestial from "@/public/assets/logo-celestial.png";
+import logo_echo from "@/public/assets/logo-echo.png";
+import logo_pulse from "@/public/assets/logo-pulse.png";
+import logo_quantum from "@/public/assets/logo-quantum.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

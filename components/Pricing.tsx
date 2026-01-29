@@ -85,6 +85,9 @@ const Pricing = () => {
             <div>
               <IoMdCheckmark className="inline mr-2" /> Integrated student payments (Stripe)
             </div>
+            <div>
+              <IoMdCheckmark className="inline mr-2" /> E-mail and SMS message engine
+            </div>
           </div>
         </div>
 
@@ -114,6 +117,9 @@ const Pricing = () => {
             </div>
             <div>
               <IoMdCheckmark className="inline mr-2" /> Integrated student payments (Stripe)
+            </div>
+            <div>
+              <IoMdCheckmark className="inline mr-2" /> E-mail and SMS message engine
             </div>
             <div>
               <IoMdCheckmark className="inline mr-2" /> Priority support

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "@/public/assests/logo.png";
+import Logo from "@/public/assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import Button from "./Button";
 

@@ -45,12 +45,23 @@ export const featureData = {
     title: "Payments Made Simple",
     description:
       "Get paid faster with Stripe Connect. Send invoices, track payments, and manage tuition.",
-    image: Payments,
-    details: [
-      "Stripe Connect integration",
-      "Auto-generated invoices",
-      "Payment reminders",
-      "Transaction dashboard"
-    ],
+    image: "/assets/modal-payments.png",
+    details: `
+      • Stripe Connect integration  
+      • Auto-generated invoices  
+      • Payment reminders  
+      • Transaction dashboard  
+    `,
+  },
+
+  messages: {
+    title: "Send messages to your students",
+    description:
+      "Send e-mail and SMS messages to individual students or entire classes.",
+    image: "/assets/modal-payments.png",
+    details: `
+      • Send e-mail and SMS messages
+      • Send bulk messages to classes or your entire student roster 
+    `,
   },
 };

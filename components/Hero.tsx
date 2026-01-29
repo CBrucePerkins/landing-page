@@ -2,9 +2,9 @@
 
 import { FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
-import HeroImage from "@/public/assests/treble-clef.png";
-import Eighthnote from "@/public/assests/eigth.png";
-import Violin from "@/public/assests/violin.png";
+import HeroImage from "@/public/assets/treble-clef.png";
+import Eighthnote from "@/public/assets/eigth.png";
+import Violin from "@/public/assets/violin.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 

@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import Avatar1 from "@/public/assests/avatar-1.png";
-import Avatar2 from "@/public/assests/avatar-2.png";
-import Avatar3 from "@/public/assests/avatar-3.png";
-import Avatar4 from "@/public/assests/avatar-4.png";
-import Avatar5 from "@/public/assests/avatar-5.png";
-import Avatar6 from "@/public/assests/avatar-6.png";
-import Avatar7 from "@/public/assests/avatar-7.png";
-import Avatar8 from "@/public/assests/avatar-8.png";
-import Avatar9 from "@/public/assests/avatar-9.png";
+import Avatar1 from "@/public/assets/avatar-1.png";
+import Avatar2 from "@/public/assets/avatar-2.png";
+import Avatar3 from "@/public/assets/avatar-3.png";
+import Avatar4 from "@/public/assets/avatar-4.png";
+import Avatar5 from "@/public/assets/avatar-5.png";
+import Avatar6 from "@/public/assets/avatar-6.png";
+import Avatar7 from "@/public/assets/avatar-7.png";
+import Avatar8 from "@/public/assets/avatar-8.png";
+import Avatar9 from "@/public/assets/avatar-9.png";
 import { motion } from "framer-motion";
 
 const Testimonials = () => {

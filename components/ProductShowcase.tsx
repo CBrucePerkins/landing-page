@@ -1,13 +1,13 @@
 "use client";
 
-import Dashboard from "@/public/assests/Dashboard.png";
-import Pyramid from "@/public/assests/treble-clef.png";
-import Tube from "@/public/assests/bass-clef.png";
+import Dashboard from "@/public/assets/Dashboard.png";
+import Pyramid from "@/public/assets/treble-clef.png";
+import Tube from "@/public/assets/bass-clef.png";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { GoCalendar, GoPerson, GoCreditCard } from "react-icons/go";
+import { GoCalendar, GoPerson, GoCreditCard, GoInbox } from "react-icons/go";
 import { MdLibraryMusic } from "react-icons/md";
 import Modal from "./Modal";
 import { featureData } from "./ProductShowcaseFeatures";
@@ -74,7 +74,7 @@ const ProductShowcase = () => {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-20 max-w-[1400px] lg:px-28">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-20 max-w-[1400px] lg:px-28">
           {/* Feature 1 */}
           <div className="mt-16">
             <GoPerson className="text-2xl mb-3" />
@@ -134,6 +134,21 @@ const ProductShowcase = () => {
             <div
               className="text-lg font-medium cursor-pointer hover:underline"
               onClick={() => setActiveFeature("payments")}
+            >
+              Learn more <FaArrowRight className="inline h-3 w-3" />
+            </div>
+          </div>
+
+          {/* Feature 5 */}
+          <div className="mt-16">
+            <GoInbox className="text-2xl mb-3" />
+            <div className="font-bold text-2xl">Send A Message</div>
+            <div className="text-lg my-2">
+              Send e-mail and SMS messages to individual students or entire classes.
+            </div>
+            <div
+              className="text-lg font-medium cursor-pointer hover:underline"
+              onClick={() => setActiveFeature("messages")}
             >
               Learn more <FaArrowRight className="inline h-3 w-3" />
             </div>
