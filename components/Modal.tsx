@@ -55,10 +55,9 @@ const Modal = ({ isOpen, onClose, feature }) => {
               <img
                 src={feature.image.src}
                 alt={feature.title}
-                className="mt-6 w-full rounded-xl shadow-lg"
+                className="mt-6 max-h-[50vh] md:max-h-[50vh] w-auto mx-auto rounded-xl shadow-lg object-contain"
               />
             )}
-
             {/* Additional content */}
             {feature.details && Array.isArray(feature.details) && (
               <ul className="mt-6 text-gray-800 text-md leading-relaxed list-disc pl-6">

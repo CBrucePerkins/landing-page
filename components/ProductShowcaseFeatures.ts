@@ -1,7 +1,8 @@
-import StudentsAndClasses from "@/public/assests/Students-classes.png";
-import Schedules from "@/public/assests/NewCalendar.png";
-import PracticeSheets from "@/public/assests/PracticeSheet.png";
-import Payments from "@/public/assests/Payments.png";
+import StudentsAndClasses from "@/public/assets/Students-classes.png";
+import Schedules from "@/public/assets/NewCalendar.png";
+import PracticeSheets from "@/public/assets/PracticeSheet.png";
+import Payments from "@/public/assets/Payments.png";
+import Messages from "@/public/assets/Messages.png";
 
 export const featureData = {
   students: {
@@ -43,9 +44,9 @@ export const featureData = {
 
   payments: {
     title: "Payments Made Simple",
+    image: Payments,
     description:
       "Get paid faster with Stripe Connect. Send invoices, track payments, and manage tuition.",
-    image: "/assets/modal-payments.png",
     details: `
       • Stripe Connect integration  
       • Auto-generated invoices  
@@ -58,7 +59,7 @@ export const featureData = {
     title: "Send messages to your students",
     description:
       "Send e-mail and SMS messages to individual students or entire classes.",
-    image: "/assets/modal-payments.png",
+    image: Messages,
     details: `
       • Send e-mail and SMS messages
       • Send bulk messages to classes or your entire student roster 

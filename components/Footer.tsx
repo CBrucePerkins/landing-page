@@ -33,7 +33,9 @@ const Footer = () => {
           <FaYoutube className="hover:scale-125" />
         </div>
       */}
+
       </div>
+      {/*
       <div className="flex flex-col gap-4">
         <div className="font-bold text-lg">Product</div>
         <div className="cursor-pointer text-gray-300/85">Features</div>
@@ -64,6 +66,7 @@ const Footer = () => {
         <div className="cursor-pointer text-gray-300/85">Terms</div>
         <div className="cursor-pointer text-gray-300/85">Security</div>
       </div>
+      */}
     </div>
   );
 };
