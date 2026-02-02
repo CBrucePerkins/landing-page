@@ -7,7 +7,11 @@ import Helix from "@/public/assets/helix2 1.png";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const CTA = () => {
+interface CTAProps {
+  onOpenWaitlist: () => void;
+}
+
+const CTA = ({ onOpenWaitlist }: CTAProps) => {
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -27,17 +31,13 @@ const CTA = () => {
           src={Star.src}
           alt="Decorative star"
           className="absolute -left-[345px] -top-28 pr-6 hidden md:block"
-          style={{
-            translateY: translateY,
-          }}
+          style={{ translateY }}
         />
         <motion.img
           src={Helix.src}
           alt="Decorative helix"
           className="absolute -right-80 -top-6 hidden md:block"
-          style={{
-            translateY: translateY,
-          }}
+          style={{ translateY }}
         />
 
         {/* CTA Heading */}
@@ -54,10 +54,16 @@ const CTA = () => {
 
         {/* CTA Buttons */}
         <div className="flex items-center gap-4 mt-4 text-lg">
-          <Button text="Get started for free" />
-          <div className="font-semibold cursor-pointer hover:underline">
+          {/* ✅ Hook the waitlist modal */}
+          <Button
+            text="Sign Up For Waiting List"
+            onClick={onOpenWaitlist}
+            className="bg-[#002499]"
+          />
+
+          <div className="font-semibold cursor-pointer hover:underline flex items-center gap-2">
             Learn more
-            <FaArrowRight className="h-3 w-3 inline ml-2" />
+            <FaArrowRight className="h-3 w-3 inline" />
           </div>
         </div>
 

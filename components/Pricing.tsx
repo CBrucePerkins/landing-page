@@ -2,7 +2,11 @@
 
 import { IoMdCheckmark } from "react-icons/io";
 
-const Pricing = () => {
+interface PricingProps {
+  onOpenWaitlist: () => void;
+}
+
+const Pricing = ({ onOpenWaitlist }: PricingProps) => {
   return (
     <div className="mb-8">
       {/* === Product Summary Section === */}
@@ -31,8 +35,11 @@ const Pricing = () => {
             <span className="font-extrabold text-5xl">$0</span>
             <span className="font-semibold text-gray-600">/month</span>
           </div>
-          <button className="text-white mb-8 bg-black py-1.5 w-full rounded-lg cursor-pointer">
-            Get started for free
+          <button
+            onClick={onOpenWaitlist}
+            className="text-white mb-8 bg-black py-1.5 w-full rounded-lg cursor-pointer"
+          >
+            Sign Up For Waiting List
           </button>
           <div className="flex flex-col gap-4 text-gray-800">
             <div>
@@ -66,8 +73,11 @@ const Pricing = () => {
             <span className="font-semibold text-gray-400">/month</span>
           </div>
           <div className="text-gray-400 mb-4 text-sm">or $100 billed yearly</div>
-          <button className="text-black font-medium mb-8 bg-white py-1.5 w-full rounded-lg cursor-pointer">
-            Start Standard Plan
+          <button
+            onClick={onOpenWaitlist}
+            className="text-black font-medium mb-8 bg-white py-1.5 w-full rounded-lg cursor-pointer"
+          >
+            Sign Up For Waiting List
           </button>
           <div className="flex flex-col gap-4">
             <div>
@@ -99,8 +109,11 @@ const Pricing = () => {
             <span className="font-semibold text-gray-600">/month</span>
           </div>
           <div className="text-gray-600 mb-4 text-sm">or $175 billed yearly</div>
-          <button className="text-white mb-8 bg-black py-1.5 w-full rounded-lg cursor-pointer">
-            Go Pro
+          <button
+            onClick={onOpenWaitlist}
+            className="text-white mb-8 bg-black py-1.5 w-full rounded-lg cursor-pointer"
+          >
+            Sign Up For Waiting List
           </button>
           <div className="flex flex-col gap-4 text-gray-800">
             <div>
