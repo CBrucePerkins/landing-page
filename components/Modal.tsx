@@ -12,7 +12,13 @@ const modal = {
   visible: { opacity: 1, scale: 1, y: 0 }
 };
 
-const Modal = ({ isOpen, onClose, feature }) => {
+type ModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+  feature?: string;
+};
+
+const Modal = ({ isOpen, onClose, feature }: ModalProps) => {
   if (!feature) return null;
 
   return (
