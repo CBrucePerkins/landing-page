@@ -47,12 +47,12 @@ export const featureData = {
     image: Payments,
     description:
       "Get paid faster with Stripe Connect. Send invoices, track payments, and manage tuition.",
-    details: `
-      • Stripe Connect integration  
-      • Auto-generated invoices  
-      • Payment reminders  
-      • Transaction dashboard  
-    `,
+    details: [
+      "Stripe Connect integration",
+      "Auto-generated invoices",
+      "Payment reminders",
+      "Transaction dashboard"
+    ],
   },
 
   messages: {
@@ -60,9 +60,9 @@ export const featureData = {
     description:
       "Send e-mail and SMS messages to individual students or entire classes.",
     image: Messages,
-    details: `
-      • Send e-mail and SMS messages
-      • Send bulk messages to classes or your entire student roster 
-    `,
+    details: [
+      "Send e-mail and SMS messages",
+      "Send bulk messages to classes or your entire student roster"
+    ],
   },
 };

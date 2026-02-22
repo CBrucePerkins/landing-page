@@ -12,8 +12,10 @@ import { MdLibraryMusic } from "react-icons/md";
 import Modal from "./Modal";
 import { featureData } from "./ProductShowcaseFeatures";
 
+type FeatureKey = keyof typeof featureData;
+
 const ProductShowcase = () => {
-  const [activeFeature, setActiveFeature] = useState(null);
+  const [activeFeature, setActiveFeature] = useState<FeatureKey | null>(null);
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
