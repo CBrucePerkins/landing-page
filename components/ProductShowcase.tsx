@@ -29,7 +29,7 @@ const ProductShowcase = () => {
       <Modal
         isOpen={!!activeFeature}
         onClose={() => setActiveFeature(null)}
-        feature={featureData[activeFeature]}
+        feature={activeFeature ? featureData[activeFeature] : undefined}
       />
 
       <div
