@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { StaticImageData } from "next/image";
 
 import StudioSetup from "@/public/assets/StudioSetup.gif";
 import PracticeSheet from "@/public/assets/PracticerSheet.gif";
@@ -10,7 +11,7 @@ import PaymentTracking from "@/public/assets/Payments.gif";
 import Messages from "@/public/assets/Messages-gif.gif";
 
 const ProductCard = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
 
   const steps = [
     {
