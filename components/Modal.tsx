@@ -12,10 +12,19 @@ const modal = {
   visible: { opacity: 1, scale: 1, y: 0 }
 };
 
+type Feature = {
+  title: string;
+  description: string;
+  image?: {
+    src: string;
+  };
+  details?: string[];
+};
+
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  feature?: string;
+  feature?: Feature | null;
 };
 
 const Modal = ({ isOpen, onClose, feature }: ModalProps) => {
