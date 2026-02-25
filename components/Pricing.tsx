@@ -43,10 +43,10 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
           </button>
           <div className="flex flex-col gap-4 text-gray-800">
             <div>
-              <IoMdCheckmark className="inline mr-2" /> Up to 4 students
+              <IoMdCheckmark className="inline mr-2" /> Up to 10 students
             </div>
             <div>
-              <IoMdCheckmark className="inline mr-2" /> 100 MB of file storage
+              <IoMdCheckmark className="inline mr-2" /> 200 MB of file storage
             </div>
             <div>
               <IoMdCheckmark className="inline mr-2" /> Student & class scheduler
