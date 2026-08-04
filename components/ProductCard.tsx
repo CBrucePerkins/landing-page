@@ -53,7 +53,7 @@ const ProductCard = () => {
         </div>
 
         <div className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
-          Simplify your studio workflow in three easy steps
+          Simplify your studio workflow with four easy steps
         </div>
 
         <div className="text-center text-lg mb-8 md:text-xl">
