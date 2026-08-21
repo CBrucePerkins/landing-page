@@ -7,8 +7,30 @@ import { twMerge } from "tailwind-merge";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Landing Page",
-  description: "Landing Page",
+  metadataBase: new URL("https://musios.io"),
+  title: "MusiOS — Teach Music, Not Admin",
+  description:
+    "MusiOS is the all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.",
+  openGraph: {
+    title: "MusiOS — Teach Music, Not Admin",
+    description:
+      "The all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.",
+    url: "https://musios.io",
+    siteName: "MusiOS",
+    images: ["/assets/Dashboard.png"],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MusiOS — Teach Music, Not Admin",
+    description:
+      "The all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.",
+    images: ["/assets/Dashboard.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
