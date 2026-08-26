@@ -1,5 +1,5 @@
 import StudentsAndClasses from "@/public/assets/Students-classes.png";
-import Schedules from "@/public/assets/NewCalendar.png";
+import Schedules from "@/public/assets/Calendar.png";
 import PracticeSheets from "@/public/assets/PracticeSheet.png";
 import Payments from "@/public/assets/Payments.png";
 import Messages from "@/public/assets/Messages.png";

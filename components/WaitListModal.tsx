@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 interface Props {
   isOpen: boolean;
@@ -131,6 +132,14 @@ const handleSubmit = async (e: React.FormEvent) => {
                   >
                     {loading ? "Joining…" : "Join the waitlist"}
                   </button>
+
+                  <p className="text-center text-sm text-gray-500">
+                    By joining, you agree to our{" "}
+                    <Link href="/privacy" className="underline hover:text-gray-700">
+                      Privacy Policy
+                    </Link>
+                    .
+                  </p>
                 </form>
               </>
             ) : (

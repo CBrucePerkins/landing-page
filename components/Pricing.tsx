@@ -32,8 +32,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
         <div className="shadow-xl border-gray-100 border-2 rounded-2xl p-8 bg-white">
           <div className="font-bold text-gray-500">Free</div>
           <div className="py-8">
-            <span className="font-extrabold text-5xl">$0</span>
-            <span className="font-semibold text-gray-600">/month</span>
+            <span className="font-extrabold text-3xl text-gray-400">Coming soon</span>
           </div>
           <button
             onClick={onOpenWaitlist}
@@ -43,11 +42,13 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
           </button>
           <div className="flex flex-col gap-4 text-gray-800">
             <div>
-              <IoMdCheckmark className="inline mr-2" /> Up to 10 students
+              <IoMdCheckmark className="inline mr-2" /> Up to 5 students
             </div>
+            {/*
             <div>
               <IoMdCheckmark className="inline mr-2" /> 200 MB of file storage
             </div>
+            */}
             <div>
               <IoMdCheckmark className="inline mr-2" /> Student & class scheduler
             </div>
@@ -69,10 +70,9 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
             </div>
           </div>
           <div className="py-8">
-            <span className="font-extrabold text-5xl">$12</span>
-            <span className="font-semibold text-gray-400">/month</span>
+            <span className="font-extrabold text-3xl text-gray-400">Coming soon</span>
           </div>
-          <div className="text-gray-400 mb-4 text-sm">or $100 billed yearly</div>
+          {/* <div className="text-gray-400 mb-4 text-sm">or $100 billed yearly</div> */}
           <button
             onClick={onOpenWaitlist}
             className="text-black font-medium mb-8 bg-white py-1.5 w-full rounded-lg cursor-pointer"
@@ -81,10 +81,10 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
           </button>
           <div className="flex flex-col gap-4">
             <div>
-              <IoMdCheckmark className="inline mr-2" /> Up to 30 students
+              <IoMdCheckmark className="inline mr-2" /> Unlimited students
             </div>
             <div>
-              <IoMdCheckmark className="inline mr-2" /> 10 GB of file storage
+              <IoMdCheckmark className="inline mr-2" /> Unlimited file storage
             </div>
             <div>
               <IoMdCheckmark className="inline mr-2" /> Student & class scheduler
@@ -96,7 +96,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
               <IoMdCheckmark className="inline mr-2" /> Integrated student payments (Stripe)
             </div>
             <div>
-              <IoMdCheckmark className="inline mr-2" /> E-mail and SMS message engine
+              <IoMdCheckmark className="inline mr-2" /> E-mail message engine
             </div>
           </div>
         </div>
@@ -105,10 +105,9 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
         <div className="shadow-xl border-gray-100 border-2 rounded-2xl p-8 bg-white">
           <div className="font-bold text-gray-500">Pro</div>
           <div className="py-8">
-            <span className="font-extrabold text-5xl">$19</span>
-            <span className="font-semibold text-gray-600">/month</span>
+            <span className="font-extrabold text-3xl text-gray-400">Coming soon</span>
           </div>
-          <div className="text-gray-600 mb-4 text-sm">or $175 billed yearly</div>
+          {/* <div className="text-gray-600 mb-4 text-sm">or $175 billed yearly</div> */}
           <button
             onClick={onOpenWaitlist}
             className="text-white mb-8 bg-black py-1.5 w-full rounded-lg cursor-pointer"
@@ -117,10 +116,10 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
           </button>
           <div className="flex flex-col gap-4 text-gray-800">
             <div>
-              <IoMdCheckmark className="inline mr-2" /> Up to 100 students
+              <IoMdCheckmark className="inline mr-2" /> Unlimited students
             </div>
             <div>
-              <IoMdCheckmark className="inline mr-2" /> 50 GB of file storage
+              <IoMdCheckmark className="inline mr-2" /> Unlimited file storage
             </div>
             <div>
               <IoMdCheckmark className="inline mr-2" /> Student & class scheduler
@@ -132,10 +131,10 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
               <IoMdCheckmark className="inline mr-2" /> Integrated student payments (Stripe)
             </div>
             <div>
-              <IoMdCheckmark className="inline mr-2" /> E-mail and SMS message engine
+              <IoMdCheckmark className="inline mr-2" /> E-mail message engine
             </div>
             <div>
-              <IoMdCheckmark className="inline mr-2" /> Priority support
+              <IoMdCheckmark className="inline mr-2" /> SMS reminders — 300/mo (US &amp; Canada) or 60/mo (Europe)
             </div>
           </div>
         </div>

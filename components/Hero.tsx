@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "./Button";
+import PhoneMockup from "./PhoneMockup";
 import HeroImage from "@/public/assets/treble-clef.png";
 import Eighthnote from "@/public/assets/eigth.png";
 import Violin from "@/public/assets/violin.png";
@@ -59,18 +60,21 @@ const Hero = ({ onOpenWaitlist }: HeroProps) => {
         </div>
 
         {/* Images */}
-        <div className="relative md:h-[600px] md:w-[600px] flex justify-center items-center mt-12 md:mt-0">
+        <div className="relative flex items-end justify-center gap-2 md:h-[600px] md:w-[640px] lg:w-[720px] mt-12 md:mt-0">
           <motion.img
             src={Eighthnote.src}
             alt=""
-            className="absolute w-20 top-6 right-24"
+            className="absolute w-20 top-6 right-16"
             style={{ translateX }}
           />
+
+          {/* Mobile app showcase — stationary, sits to the left of the treble clef */}
+          <PhoneMockup className="relative z-10 w-[190px] sm:w-[210px] lg:w-[230px] mb-4" />
 
           <motion.img
             src={HeroImage.src}
             alt=""
-            className="h-[420px] relative z-10"
+            className="h-[300px] sm:h-[360px] lg:h-[420px] relative -ml-4"
             animate={{ translateY: [-20, 20] }}
             transition={{ repeat: Infinity, repeatType: "mirror", duration: 3 }}
           />

@@ -2,3 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Typography for standalone legal pages (Privacy, Terms) — no @tailwindcss/typography
+   plugin installed, so these are hand-styled to match the rest of the site. */
+.legal-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content p {
+  margin-bottom: 1rem;
+}
+
+.legal-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-content a {
+  color: #001e80;
+  text-decoration: underline;
+}
+
+.legal-content strong {
+  color: #000;
+  font-weight: 600;
+}
+
