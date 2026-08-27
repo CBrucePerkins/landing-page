@@ -5,6 +5,9 @@ import LegalLayout from "@/components/LegalLayout";
 export const metadata: Metadata = {
   title: "Privacy Policy — MusiOS",
   description: "How MusiOS collects, uses, and protects your data.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPolicy() {

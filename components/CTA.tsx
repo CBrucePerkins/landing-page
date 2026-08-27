@@ -41,9 +41,9 @@ const CTA = ({ onOpenWaitlist }: CTAProps) => {
         />
 
         {/* CTA Heading */}
-        <div className="text-4xl md:text-5xl lg:text-6xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
           Transform your music studio today
-        </div>
+        </h2>
 
         {/* Subtext */}
         <div className="text-center text-lg mb-8 md:text-xl text-gray-700">

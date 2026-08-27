@@ -15,9 +15,9 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
           Simple pricing, powerful results
         </div>
 
-        <div className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
           Built for music teachers — from solo tutors to full schools
-        </div>
+        </h2>
 
         <div className="text-center text-lg mb-8 md:text-xl text-gray-700">
           Whether you’re managing a few students or running a full studio,
@@ -30,7 +30,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
       <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center pb-20 gap-8">
         {/* === Free Tier === */}
         <div className="shadow-xl border-gray-100 border-2 rounded-2xl p-8 bg-white">
-          <div className="font-bold text-gray-500">Free</div>
+          <h3 className="font-bold text-gray-500">Free</h3>
           <div className="py-8">
             <span className="font-extrabold text-3xl text-gray-400">Coming soon</span>
           </div>
@@ -64,7 +64,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
         {/* === Standard Tier === */}
         <div className="shadow-2xl border-2 rounded-2xl p-8 bg-black text-white">
           <div className="flex justify-between items-center">
-            <div className="font-bold text-gray-400">Standard</div>
+            <h3 className="font-bold text-gray-400">Standard</h3>
             <div className="border-2 w-fit p-0.5 px-3 text-xs rounded-xl border-slate-300/20 bg-gradient-to-r from-pink-500 via-lime-600 to-sky-400 text-transparent bg-clip-text font-bold tracking-tighter">
               Most Popular
             </div>
@@ -103,7 +103,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
 
         {/* === Pro Tier === */}
         <div className="shadow-xl border-gray-100 border-2 rounded-2xl p-8 bg-white">
-          <div className="font-bold text-gray-500">Pro</div>
+          <h3 className="font-bold text-gray-500">Pro</h3>
           <div className="py-8">
             <span className="font-extrabold text-3xl text-gray-400">Coming soon</span>
           </div>
@@ -141,7 +141,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
 
         {/* === School Administrator Tier === */}
         <div className="shadow-xl border-gray-100 border-2 rounded-2xl p-8 bg-gray-100 opacity-70">
-          <div className="font-bold text-gray-500">School Administrator</div>
+          <h3 className="font-bold text-gray-500">School Administrator</h3>
           <div className="py-8">
             <span className="font-extrabold text-3xl text-gray-400">Coming soon</span>
           </div>

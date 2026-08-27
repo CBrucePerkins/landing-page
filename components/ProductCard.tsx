@@ -57,9 +57,9 @@ const ProductCard = () => {
           How it works
         </div>
 
-        <div className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
           Simplify your studio workflow with four easy steps
-        </div>
+        </h2>
 
         <div className="text-center text-lg mb-8 md:text-xl">
           MusiOS helps you spend less time managing and more time teaching.
@@ -107,7 +107,7 @@ const ProductCard = () => {
               <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-[#001E80] text-sm font-bold text-white">
                 {step.id}
               </div>
-              <div className="text-xl font-bold mb-2">{step.title}</div>
+              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
               <div className="text-slate-700">{step.description}</div>
             </div>
           </motion.div>

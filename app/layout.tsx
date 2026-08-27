@@ -31,6 +31,31 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  alternates: {
+    canonical: "/",
+  },
+};
+
+// Organization/WebSite structured data — kept to verifiable facts only
+// (name, url, logo). Deliberately no SoftwareApplication/Offer schema yet:
+// pricing is still shown as "Coming soon" with no live numbers, and
+// fabricating price data in structured markup would be worse than omitting
+// it. Add that once real prices are published.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "MusiOS",
+      url: "https://musios.io",
+      logo: "https://musios.io/assets/logo.png",
+    },
+    {
+      "@type": "WebSite",
+      name: "MusiOS",
+      url: "https://musios.io",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -40,6 +65,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={twMerge(dmSans.className, "antialiased")}>
         <div className="bg-black text-white p-3 text-sm text-center cursor-pointer">
           <span className="hidden sm:inline pr-2 opacity-80">

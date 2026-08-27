@@ -5,6 +5,9 @@ import LegalLayout from "@/components/LegalLayout";
 export const metadata: Metadata = {
   title: "Terms of Service — MusiOS",
   description: "The terms that govern your use of MusiOS.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsOfService() {

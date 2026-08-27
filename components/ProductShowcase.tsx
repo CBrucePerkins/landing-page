@@ -39,9 +39,9 @@ const ProductShowcase = () => {
             Powerful tools for music teachers
           </div>
 
-          <div className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
             Manage students, lessons, practice, and payments — all in one place.
-          </div>
+          </h2>
 
           <div className="text-center text-lg mb-8 md:text-xl">
             MusiOS helps private teachers and music schools stay organized,
@@ -100,7 +100,7 @@ const ProductShowcase = () => {
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#001E80]/10 text-2xl text-[#001E80]">
                   {icon}
                 </div>
-                <div className="font-bold text-xl mb-2">{feature.title}</div>
+                <h3 className="font-bold text-xl mb-2">{feature.title}</h3>
                 <div className="text-base text-slate-700 mb-4">
                   {feature.description}
                 </div>

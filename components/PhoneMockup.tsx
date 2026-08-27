@@ -1,14 +1,15 @@
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-import MobileGif from "@/public/assets/mobile.gif";
 
 interface PhoneMockupProps {
   className?: string;
 }
 
 // A CSS phone chassis with the app recording clipped to the screen area.
-// The gif already includes its own status bar/notch (it's a real screen
-// recording), so the frame just adds the bezel + side buttons around it.
+// The recording already includes its own status bar/notch (it's a real
+// screen recording), so the frame just adds the bezel + side buttons.
+// Rendered as a muted looping <video> rather than a GIF — same visual
+// result at ~1/5th the file size, and it's likely the LCP element in the
+// Hero, so this materially helps page-load performance.
 const PhoneMockup = ({ className = "" }: PhoneMockupProps) => {
   return (
     <div
@@ -25,12 +26,16 @@ const PhoneMockup = ({ className = "" }: PhoneMockupProps) => {
       {/* Chassis */}
       <div className="relative h-full w-full rounded-[2.4rem] border-[10px] border-neutral-900 bg-neutral-900 shadow-2xl">
         <div className="relative h-full w-full overflow-hidden rounded-[1.7rem] bg-black">
-          <Image
-            src={MobileGif}
-            alt="MusiOS mobile app"
-            fill
-            unoptimized
-            className="object-cover"
+          <video
+            className="h-full w-full object-cover"
+            src="/assets/mobile.mp4"
+            poster="/assets/mobile-poster.jpg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            aria-label="MusiOS mobile app"
           />
         </div>
       </div>
