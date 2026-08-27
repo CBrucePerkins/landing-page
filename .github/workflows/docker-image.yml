@@ -46,3 +46,26 @@ jobs:
           tags: |
             ghcr.io/${{ env.OWNER }}/musios-landing:${{ env.TAG }}
             ghcr.io/${{ env.OWNER }}/musios-landing:main
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      # No checkout/scp step here on purpose — the compose files this reads
+      # (docker-compose.yaml + docker-compose.prod.yaml, which define the
+      # `landing` service) are owned and kept in sync by the musios repo's
+      # own deploy pipeline, not this one. This job only ever touches the
+      # one `landing` service, never anything else already on the server.
+      - name: Deploy
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -e
+            echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            cd /opt/musios
+            docker compose -f docker-compose.yaml -f docker-compose.prod.yaml pull landing
+            docker compose -f docker-compose.yaml -f docker-compose.prod.yaml up -d landing
+            docker image prune -f
