@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import BrandSlide from "@/components/BrandSlide";
 import CTA from "@/components/CTA";
+import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -45,6 +46,10 @@ export default function Home() {
 
       <section id="pricing">
         <Pricing onOpenWaitlist={openWaitlist}/>
+      </section>
+
+      <section id="faq">
+        <FAQ />
       </section>
 
       <section id="cta">

@@ -18,6 +18,7 @@ const Header = ({ onOpenWaitlist }: HeaderProps) => {
           <li><a href="#product-showcase">Features</a></li>
           <li><a href="#product-card">Getting Started</a></li>
           <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <Button
             text="Sign Up For Waiting List"
             onClick={onOpenWaitlist}
