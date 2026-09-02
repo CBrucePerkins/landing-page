@@ -64,8 +64,31 @@ jobs:
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           script: |
             set -e
-            echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+            # ghcr.io intermittently times out on the TLS handshake (a known,
+            # recurring flakiness — not specific to this pipeline). Retry the
+            # two network-dependent steps rather than failing the whole
+            # deploy on one bad handshake; `up -d`/`prune` are local-only
+            # once the image is pulled, so they don't need it.
+            retry() {
+              local max=3 delay=10 n=1
+              until "$@"; do
+                if [ "$n" -ge "$max" ]; then
+                  echo "Command failed after $max attempts: $*" >&2
+                  return 1
+                fi
+                echo "Attempt $n/$max failed — retrying in ${delay}s..." >&2
+                sleep "$delay"
+                n=$((n+1))
+              done
+            }
+
+            login() {
+              echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            }
+
+            retry login
             cd /opt/musios
-            docker compose -f docker-compose.yaml -f docker-compose.prod.yaml pull landing
+            retry docker compose -f docker-compose.yaml -f docker-compose.prod.yaml pull landing
             docker compose -f docker-compose.yaml -f docker-compose.prod.yaml up -d landing
             docker image prune -f
