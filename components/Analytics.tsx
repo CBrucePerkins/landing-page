@@ -8,7 +8,7 @@
 // deliberately renders nothing rather than pointing at a site that doesn't
 // exist yet.
 const UMAMI_SCRIPT_SRC = "https://analytics.musios.io/script.js";
-const UMAMI_WEBSITE_ID = "REPLACE_WITH_WEBSITE_ID_FROM_UMAMI_DASHBOARD";
+const UMAMI_WEBSITE_ID = "1f88a71a-f69a-4e96-be56-f2fcbf14c280";
 
 const Analytics = () => {
   if (!UMAMI_WEBSITE_ID || UMAMI_WEBSITE_ID.startsWith("REPLACE_")) {
