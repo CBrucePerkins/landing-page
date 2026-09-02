@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { FaArrowRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
+import Analytics from "@/components/Analytics";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -70,6 +71,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Analytics />
       </head>
       <body className={twMerge(dmSans.className, "antialiased")}>
         <div className="bg-black text-white p-3 text-sm text-center cursor-pointer">

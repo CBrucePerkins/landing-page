@@ -157,12 +157,17 @@ export default function PrivacyPolicy() {
           security.
         </p>
 
-        <h2>9. Cookies</h2>
+        <h2>9. Cookies &amp; analytics</h2>
         <p>
-          musios.io does not currently use analytics or advertising cookies —
-          only what&rsquo;s strictly necessary for the site to function. If
-          that changes, we&rsquo;ll update this policy and request consent
-          where required.
+          musios.io does not use advertising cookies, and doesn&rsquo;t set
+          any cookies for analytics either. We use Umami, an open-source
+          analytics tool we run ourselves on our own EU-based servers, to see
+          aggregate traffic like page views and referrers. It doesn&rsquo;t
+          use cookies or any persistent identifier, can&rsquo;t track you
+          across other sites, and the data never leaves our own
+          infrastructure — no third party receives it. Because of that, no
+          cookie consent banner is required. If that ever changes,
+          we&rsquo;ll update this policy and request consent where required.
         </p>
 
         <h2>10. Changes to this policy</h2>
