@@ -15,7 +15,7 @@ export default function WaitlistModal({ isOpen, onClose }: Props) {
   const [loading, setLoading] = useState(false);
 
   const GOOGLE_SHEETS_ENDPOINT =
-  "https://script.google.com/macros/s/AKfycbwv5t7q5-VQ9SQqRJond3T-2FOF8QXf7cE06U72MNd8YllWl2q8MEAza6RBOiqr19t2/exec";
+  "https://script.google.com/macros/s/AKfycbwn3eD0aBLxg2T1OJK4MC5ejZnsYTEwTdcaA7_tJUOcbSLuEWaeJNa1rBM55jAUTzs2/exec";
 
 const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
