@@ -9,6 +9,9 @@ const Footer = () => {
     <div className="flex flex-col items-center gap-6 bg-black text-white px-8 py-12 md:flex-row md:justify-between md:px-20 xl:px-44">
       <Image src={Logo} alt="MusiOS" className="cursor-pointer" />
       <div className="flex items-center gap-6 text-sm text-gray-300/85">
+        <Link href="/support" className="hover:text-white">
+          Support
+        </Link>
         <Link href="/privacy" className="hover:text-white">
           Privacy
         </Link>

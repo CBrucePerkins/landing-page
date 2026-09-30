@@ -18,7 +18,7 @@ const faqs = [
   {
     question: "How much does MusiOS cost?",
     answer:
-      "MusiOS offers a free plan to get started, plus paid Standard and Pro plans with unlimited students and unlimited storage as your studio grows. See the pricing section above for full details.",
+      "MusiOS offers a free plan to get started, plus paid Standard and Pro plans with unlimited students and unlimited storage as your studio grows. See musios.io for current pricing details.",
   },
   {
     question: "Is there a limit on how many students I can add?",
