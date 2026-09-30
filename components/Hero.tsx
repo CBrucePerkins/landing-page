@@ -8,12 +8,10 @@ import HeroImage from "@/public/assets/treble-clef.png";
 import Eighthnote from "@/public/assets/eigth.png";
 import Violin from "@/public/assets/violin.png";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useWaitlist } from "./WaitlistContext";
 
-interface HeroProps {
-  onOpenWaitlist: () => void;
-}
-
-const Hero = ({ onOpenWaitlist }: HeroProps) => {
+const Hero = () => {
+  const { openWaitlist } = useWaitlist();
   const heroRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -49,13 +47,18 @@ const Hero = ({ onOpenWaitlist }: HeroProps) => {
             {/* ✅ ONLY triggers open */}
             <Button
               text="Sign Up For Waiting List"
-              onClick={onOpenWaitlist}
+              onClick={openWaitlist}
             />
 
-            <div className="cursor-pointer hover:underline flex items-center gap-2">
+            {/* Next section on the page (#problem) — plain in-page anchor,
+                same as the Header's nav links. */}
+            <a
+              href="#problem"
+              className="cursor-pointer hover:underline flex items-center gap-2"
+            >
               Learn How It Works
               <FaArrowRight className="h-3 w-3 inline" />
-            </div>
+            </a>
           </div>
         </div>
 

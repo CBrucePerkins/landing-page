@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
-import { FaArrowRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import Analytics from "@/components/Analytics";
+import AnnouncementBar from "@/components/AnnouncementBar";
+import { WaitlistProvider } from "@/components/WaitlistContext";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -74,15 +75,10 @@ export default function RootLayout({
         <Analytics />
       </head>
       <body className={twMerge(dmSans.className, "antialiased")}>
-        <div className="bg-black text-white p-3 text-sm text-center cursor-pointer">
-          <span className="hidden sm:inline pr-2 opacity-80">
-            The all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.
-          </span>
-          <span className="pr-1">
-            Get started for free <FaArrowRight className="inline h-2 w-2" />
-          </span>
-        </div>
-        {children}
+        <WaitlistProvider>
+          <AnnouncementBar />
+          {children}
+        </WaitlistProvider>
       </body>
     </html>
   );

@@ -1,12 +1,11 @@
 "use client";
 
 import { IoMdCheckmark } from "react-icons/io";
+import { useWaitlist } from "./WaitlistContext";
 
-interface PricingProps {
-  onOpenWaitlist: () => void;
-}
+const Pricing = () => {
+  const { openWaitlist } = useWaitlist();
 
-const Pricing = ({ onOpenWaitlist }: PricingProps) => {
   return (
     <div className="mb-8">
       {/* === Product Summary Section === */}
@@ -35,7 +34,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
             <span className="font-extrabold text-3xl text-gray-400">Coming soon</span>
           </div>
           <button
-            onClick={onOpenWaitlist}
+            onClick={openWaitlist}
             className="text-white mb-8 bg-black py-1.5 w-full rounded-lg cursor-pointer"
           >
             Sign Up For Waiting List
@@ -74,7 +73,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
           </div>
           {/* <div className="text-gray-400 mb-4 text-sm">or $100 billed yearly</div> */}
           <button
-            onClick={onOpenWaitlist}
+            onClick={openWaitlist}
             className="text-black font-medium mb-8 bg-white py-1.5 w-full rounded-lg cursor-pointer"
           >
             Sign Up For Waiting List
@@ -109,7 +108,7 @@ const Pricing = ({ onOpenWaitlist }: PricingProps) => {
           </div>
           {/* <div className="text-gray-600 mb-4 text-sm">or $175 billed yearly</div> */}
           <button
-            onClick={onOpenWaitlist}
+            onClick={openWaitlist}
             className="text-white mb-8 bg-black py-1.5 w-full rounded-lg cursor-pointer"
           >
             Sign Up For Waiting List

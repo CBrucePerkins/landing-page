@@ -20,7 +20,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className="text-sm text-gray-300/85">
-        © {year} MusiOS. All rights reserved.
+        © {year} Perkins Consult ApS. All rights reserved.
       </div>
     </div>
   );

@@ -6,12 +6,10 @@ import Star from "@/public/assets/emojistar 1.png";
 import Helix from "@/public/assets/helix2 1.png";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useWaitlist } from "./WaitlistContext";
 
-interface CTAProps {
-  onOpenWaitlist: () => void;
-}
-
-const CTA = ({ onOpenWaitlist }: CTAProps) => {
+const CTA = () => {
+  const { openWaitlist } = useWaitlist();
   const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -57,7 +55,7 @@ const CTA = ({ onOpenWaitlist }: CTAProps) => {
           {/* ✅ Hook the waitlist modal */}
           <Button
             text="Sign Up For Waiting List"
-            onClick={onOpenWaitlist}
+            onClick={openWaitlist}
             className="bg-[#002499]"
           />
 

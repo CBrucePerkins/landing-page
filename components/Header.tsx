@@ -1,13 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Logo from "@/public/assets/logo.png";
 import { FaBars } from "react-icons/fa";
 import Button from "./Button";
+import { useWaitlist } from "./WaitlistContext";
 
-interface HeaderProps {
-  onOpenWaitlist: () => void;
-}
+const Header = () => {
+  const { openWaitlist } = useWaitlist();
 
-const Header = ({ onOpenWaitlist }: HeaderProps) => {
   return (
     <header className="flex justify-between items-center px-6 py-4 backdrop-blur-md sticky top-0 z-20 bg-gradient-to-r from-[#E0E7FD] to-[#FDFEFF] shadow-md">
       <Image src={Logo} alt="Logo" className="cursor-pointer" />
@@ -21,7 +22,7 @@ const Header = ({ onOpenWaitlist }: HeaderProps) => {
           <li><a href="#faq">FAQ</a></li>
           <Button
             text="Sign Up For Waiting List"
-            onClick={onOpenWaitlist}
+            onClick={openWaitlist}
           />
         </ul>
       </nav>
