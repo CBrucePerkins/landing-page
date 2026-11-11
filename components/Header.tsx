@@ -1,33 +1,33 @@
-"use client";
-
 import Image from "next/image";
 import Logo from "@/public/assets/logo.png";
-import { FaBars } from "react-icons/fa";
-import Button from "./Button";
-import { useWaitlist } from "./WaitlistContext";
+import WaitlistButton from "./WaitlistButton";
 
-const Header = () => {
-  const { openWaitlist } = useWaitlist();
+const LINKS = [
+  { href: "#features", label: "Features" },
+  { href: "#students", label: "For students" },
+  { href: "#pricing", label: "Pricing" },
+  { href: "#faq", label: "FAQ" },
+];
 
-  return (
-    <header className="flex justify-between items-center px-6 py-4 backdrop-blur-md sticky top-0 z-20 bg-gradient-to-r from-[#E0E7FD] to-[#FDFEFF] shadow-md">
-      <Image src={Logo} alt="Logo" className="cursor-pointer" />
-      <FaBars className="block md:hidden" />
-      <nav className="hidden md:block">
-        <ul className="flex gap-6 items-center">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#product-showcase">Features</a></li>
-          <li><a href="#product-card">Getting Started</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <Button
-            text="Sign Up For Waiting List"
-            onClick={openWaitlist}
-          />
-        </ul>
+// On phones the links drop away and the sign-up button stays, so there's
+// always one obvious action. (The old hamburger icon had no menu behind it.)
+const Header = () => (
+  <header className="sticky top-0 z-30 border-b border-slate-200/70 bg-white/85 backdrop-blur-md">
+    <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
+      <a href="#top" className="flex items-center gap-2 text-lg font-extrabold tracking-tight text-ink">
+        <Image src={Logo} alt="" className="h-8 w-8" priority />
+        MusiOS
+      </a>
+      <nav aria-label="Main" className="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
+        {LINKS.map((l) => (
+          <a key={l.href} href={l.href} className="transition-colors hover:text-brand">
+            {l.label}
+          </a>
+        ))}
       </nav>
-    </header>
-  );
-};
+      <WaitlistButton size="sm">Join the waitlist</WaitlistButton>
+    </div>
+  </header>
+);
 
 export default Header;

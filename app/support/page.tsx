@@ -47,7 +47,10 @@ export default function SupportPage() {
         </a>
       </main>
 
-      <FAQ />
+      <section className="px-6 pb-24 pt-8">
+        <h2 className="mb-8 text-center text-2xl font-bold">Frequently asked questions</h2>
+        <FAQ />
+      </section>
 
       <Footer />
     </div>

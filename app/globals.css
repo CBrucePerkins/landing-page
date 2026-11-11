@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* In-page links glide, except for people who've asked for less motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Anchored sections clear the sticky header. */
+section[id] { scroll-margin-top: 72px; }
+
 /* Typography for standalone legal pages (Privacy, Terms) — no @tailwindcss/typography
    plugin installed, so these are hand-styled to match the rest of the site. */
 .legal-content h2 {

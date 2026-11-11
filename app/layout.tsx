@@ -3,20 +3,19 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
 import Analytics from "@/components/Analytics";
-import AnnouncementBar from "@/components/AnnouncementBar";
 import { WaitlistProvider } from "@/components/WaitlistContext";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://musios.io"),
-  title: "MusiOS — Teach Music, Not Admin",
+  title: "MusiOS: Teach music, not admin",
   description:
-    "MusiOS is the all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.",
+    "Schedule lessons, assign practice, get paid and message students from one app on your phone. Your students get the app too.",
   openGraph: {
-    title: "MusiOS — Teach Music, Not Admin",
+    title: "MusiOS: Teach music, not admin",
     description:
-      "The all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.",
+      "Schedule lessons, assign practice, get paid and message students from one app on your phone.",
     url: "https://musios.io",
     siteName: "MusiOS",
     images: ["/assets/Dashboard.png"],
@@ -25,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MusiOS — Teach Music, Not Admin",
+    title: "MusiOS: Teach music, not admin",
     description:
-      "The all-in-one platform for music teachers to manage students, lessons, practice, and payments — all in one place.",
+      "Schedule lessons, assign practice, get paid and message students from one app on your phone.",
     images: ["/assets/Dashboard.png"],
   },
   icons: {
@@ -76,7 +75,6 @@ export default function RootLayout({
       </head>
       <body className={twMerge(dmSans.className, "antialiased")}>
         <WaitlistProvider>
-          <AnnouncementBar />
           {children}
         </WaitlistProvider>
       </body>

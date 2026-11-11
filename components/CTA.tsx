@@ -1,77 +1,22 @@
-"use client";
+import Reveal from "./Reveal";
+import WaitlistButton from "./WaitlistButton";
 
-import { FaArrowRight } from "react-icons/fa";
-import Button from "./Button";
-import Star from "@/public/assets/emojistar 1.png";
-import Helix from "@/public/assets/helix2 1.png";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useWaitlist } from "./WaitlistContext";
-
-const CTA = () => {
-  const { openWaitlist } = useWaitlist();
-  const sectionRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start end", "end start"],
-  });
-
-  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
-
-  return (
-    <div
-      ref={sectionRef}
-      className="flex flex-col items-center pt-16 pb-24 px-14 bg-gradient-to-t from-[#afbbe4] to-white overflow-x-clip"
-    >
-      <div className="max-w-[700px] flex flex-col items-center relative">
-        <motion.img
-          src={Star.src}
-          alt="Decorative star"
-          className="absolute -left-[345px] -top-28 pr-6 hidden md:block"
-          style={{ translateY }}
-        />
-        <motion.img
-          src={Helix.src}
-          alt="Decorative helix"
-          className="absolute -right-80 -top-6 hidden md:block"
-          style={{ translateY }}
-        />
-
-        {/* CTA Heading */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl py-6 font-bold tracking-tighter text-center bg-gradient-to-b from-black to-[#002499] text-transparent bg-clip-text">
-          Transform your music studio today
+const CTA = () => (
+  <section id="join" className="bg-white px-5 pb-24 sm:pb-28">
+    <Reveal className="mx-auto max-w-5xl">
+      <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-brand-dark to-brand px-8 py-16 text-center text-white sm:px-16 sm:py-20">
+        <div aria-hidden className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
+        <h2 className="relative text-3xl font-extrabold tracking-tight [text-wrap:balance] sm:text-5xl">
+          Spend your time on the music.
         </h2>
-
-        {/* Subtext */}
-        <div className="text-center text-lg mb-8 md:text-xl text-gray-700">
-          Join the many teachers using <span className="font-semibold">MusiOS</span> to
-          simplify scheduling, student practice tracking, and payments — all in one secure platform.
-          Start free and focus more on teaching, not admin.
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex items-center gap-4 mt-4 text-lg">
-          {/* ✅ Hook the waitlist modal */}
-          <Button
-            text="Sign Up For Waiting List"
-            onClick={openWaitlist}
-            className="bg-[#002499]"
-          />
-
-          <div className="font-semibold cursor-pointer hover:underline flex items-center gap-2">
-            Learn more
-            <FaArrowRight className="h-3 w-3 inline" />
-          </div>
-        </div>
-
-        {/* Small Trust Line */}
-        <div className="mt-8 text-center text-sm text-gray-600">
-          No credit card required · Unlimited free trial · Upgrade anytime
-        </div>
+        <p className="relative mx-auto mt-4 max-w-xl text-lg text-indigo-100/85">
+          MusiOS opens to new teachers soon. Join the waitlist and you&apos;ll be the first to know.
+        </p>
+        <WaitlistButton size="lg" variant="light" className="relative mt-8" />
+        <p className="relative mt-4 text-sm text-indigo-100/70">Free trial with up to 4 students and 1 class. No time limit.</p>
       </div>
-    </div>
-  );
-};
+    </Reveal>
+  </section>
+);
 
 export default CTA;
