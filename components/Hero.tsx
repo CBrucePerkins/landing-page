@@ -28,21 +28,21 @@ const Hero = () => (
         <p className="mt-4 text-sm text-slate-500">Free trial with up to 4 students and 1 class. No time limit.</p>
       </div>
 
-      {/* Teacher app in front, student app behind it: the two sides of one studio. */}
+      {/* One app, two sign-ins: the teacher's view in front, a student's behind it. */}
       {/* Sized so the pair fits side by side on a 360px phone without clipping,
           and the front phone never covers the back phone's label. */}
       <div className="relative mx-auto h-[440px] w-full max-w-[350px] sm:h-[580px] sm:max-w-[470px]">
         <div className="absolute right-0 top-0 rotate-[5deg]">
           <PhoneFrame className="w-[155px] sm:w-[225px]">
-            <Screen name="hero-student" label="Student · This week's practice" alt="The MusiOS student app showing this week's practice" sizes="225px" priority />
+            <Screen name="hero-student" label="Student · This week's practice" alt="MusiOS signed in as a student, showing this week's practice" sizes="225px" priority />
           </PhoneFrame>
-          <span className="mt-3 block text-center text-xs font-semibold uppercase tracking-wider text-slate-400">Student app</span>
+          <span className="mt-3 block text-center text-xs font-semibold uppercase tracking-wider text-slate-400">Student</span>
         </div>
         <div className="absolute bottom-0 left-0 z-10">
           <PhoneFrame className="w-[180px] sm:w-[255px]">
-            <Screen name="hero-teacher" label="Teacher · Home, today's lessons" alt="The MusiOS teacher app showing today's lessons and students" sizes="255px" priority />
+            <Screen name="hero-teacher" label="Teacher · Home, today's lessons" alt="MusiOS signed in as a teacher, showing their students and lesson times" sizes="255px" priority />
           </PhoneFrame>
-          <span className="mt-3 block text-center text-xs font-semibold uppercase tracking-wider text-slate-400">Teacher app</span>
+          <span className="mt-3 block text-center text-xs font-semibold uppercase tracking-wider text-slate-400">Teacher</span>
         </div>
       </div>
     </div>

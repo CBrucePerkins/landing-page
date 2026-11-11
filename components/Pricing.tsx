@@ -11,7 +11,7 @@ const PLANS = [
     name: "Free trial",
     price: "Free",
     note: "No time limit, no card needed",
-    points: ["Up to 4 students", "1 class", "Scheduling, practice and files", "The student app included"],
+    points: ["Up to 4 students", "1 class", "Scheduling, practice and files", "Student logins included"],
     style: "light",
   },
   {
@@ -25,7 +25,7 @@ const PLANS = [
       "Practice tracking and a file library",
       "Card payments with reminders",
       "App and email messages, plus texting from your phone",
-      "Teacher and student apps on iPhone, Android and web",
+      "For you and your students, on iPhone, Android and web",
     ],
     style: "featured",
   },

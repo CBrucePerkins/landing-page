@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "What is MusiOS?",
     answer:
-      "MusiOS is an app for music teachers that brings scheduling, practice tracking, messaging and payments into one place, on your phone and on the web. Your students get their own app to see what to practise, open the files you share and pay you.",
+      "MusiOS is an app for music teachers that brings scheduling, practice tracking, messaging and payments into one place, on your phone and on the web. Your students sign in to the same app to see what to practise, open the files you share and pay you.",
   },
   {
     question: "When can I start using it?",
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "Is there a mobile app?",
     answer:
-      "Yes. MusiOS works on iPhone, Android and in any web browser, for teachers and students alike. The iPhone and Android apps arrive in the App Store and Google Play at launch.",
+      "Yes. MusiOS works on iPhone, Android and in any web browser, for teachers and students alike. It arrives in the App Store and Google Play at launch.",
   },
   {
     question: "How do students pay me?",
