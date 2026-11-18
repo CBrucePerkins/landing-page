@@ -19,6 +19,11 @@ const SCREENS = [
     body: "What's due, and a button to pay it by card. Receipts included.",
     shot: { name: "student-pay", label: "Student · Payments, To pay", alt: "A student's payment due, with a Pay button" },
   },
+  {
+    title: "Your studio policy, agreed",
+    body: "Read once and accepted with their name, as the student or a parent. A copy lands in their inbox.",
+    shot: { name: "student-policy", label: "Student · Studio policy, Accept", alt: "A teacher's studio policy with the form to accept it" },
+  },
 ];
 
 const StudentApp = () => (
@@ -31,10 +36,10 @@ const StudentApp = () => (
         </SectionHeading>
       </Reveal>
 
-      <div className="mt-16 grid gap-14 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-16 grid gap-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {SCREENS.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.08} className="flex flex-col items-center text-center">
-            <PhoneFrame className="w-[220px] sm:w-[230px]" onDark>
+            <PhoneFrame className="w-[220px] sm:w-[230px] lg:w-[210px]" onDark>
               <Screen {...s.shot} sizes="230px" />
             </PhoneFrame>
             <h3 className="mt-8 text-xl font-bold">{s.title}</h3>

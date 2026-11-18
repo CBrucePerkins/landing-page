@@ -32,6 +32,11 @@ const faqs = [
       "You connect your own Stripe account once. After that you send a payment request, your student pays by card from the app or an emailed link, and Stripe pays out to your bank. You can also mark a payment as paid when someone pays in cash or by bank transfer.",
   },
   {
+    question: "Can students agree to my studio policy?",
+    answer:
+      "Yes, on the Standard plan. Write your policy in MusiOS, starting from a template that covers lessons, payment, cancellations and make-ups, and publish it. Students, or their parents, read and accept it before they carry on in the app, or from an emailed link without signing in. You see who has accepted which version and when, can export that record, and both of you get a copy by email. When you change something important, you can ask everyone to accept again.",
+  },
+  {
     question: "Can I text my students?",
     answer:
       "Yes. Messages go out in the app and by email, and in the phone app you can also text students from your own number. MusiOS opens your Messages app for one student after another with the text ready, so nobody sees anyone else's number.",

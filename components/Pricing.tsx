@@ -24,6 +24,7 @@ const PLANS = [
       "Scheduling with calendar sync",
       "Practice tracking and a file library",
       "Card payments with reminders",
+      "A studio policy your students accept",
       "App and email messages, plus texting from your phone",
       "For you and your students, on iPhone, Android and web",
     ],

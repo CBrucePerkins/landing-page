@@ -1,4 +1,4 @@
-import { MdCalendarMonth, MdQueueMusic, MdPayments, MdForum, MdCheck } from "react-icons/md";
+import { MdCalendarMonth, MdQueueMusic, MdPayments, MdHandshake, MdForum, MdCheck } from "react-icons/md";
 import { PhoneFrame } from "./Frames";
 import Reveal from "./Reveal";
 import Screen from "./Screen";
@@ -30,6 +30,18 @@ const FEATURES = [
     body: "Request a payment from one student or a whole class. They pay by card in a tap, you see who still owes you, and a reminder is one button away.",
     points: ["Card payments through Stripe, paid out to your bank", "Reminders, plus a pay link to send any way you like", "Record cash and bank transfers too"],
     shot: { name: "payments", label: "Teacher · Payments, Unpaid", alt: "Outstanding payments and who still owes, in MusiOS" },
+  },
+  {
+    icon: MdHandshake,
+    label: "Studio policy",
+    title: "Your studio rules, agreed in writing",
+    body: "Write down how lessons, payment, cancellations and make-ups work, starting from a template. Students, or their parents, read it and accept it before they carry on, and you keep a dated record of who agreed to what.",
+    points: [
+      "Accepted in the app or from an emailed link, no sign-in needed",
+      "Change it any time, and choose whether everyone accepts again",
+      "Every acceptance on record, with a copy emailed to both of you",
+    ],
+    shot: { name: "policy", label: "Teacher · Studio policy, Acceptance", alt: "Who has accepted the studio policy and who hasn't yet, in MusiOS" },
   },
   {
     icon: MdForum,
