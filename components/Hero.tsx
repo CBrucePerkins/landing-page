@@ -17,8 +17,8 @@ const Hero = () => (
           Teach music, not admin.
         </h1>
         <p className="mt-5 max-w-xl text-lg text-slate-600 [text-wrap:pretty] sm:text-xl">
-          Schedule lessons, assign practice, get paid and message your students, all from one app on your phone.
-          Your students get the app too.
+          Give every practice item its own videos, play-alongs and sheet music. Schedule lessons, get paid and message
+          your students, all from one app on your phone. Your students get the app too.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
           <WaitlistButton size="lg" />

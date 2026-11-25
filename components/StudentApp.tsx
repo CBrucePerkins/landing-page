@@ -6,13 +6,13 @@ import SectionHeading from "./SectionHeading";
 const SCREENS = [
   {
     title: "This week's practice",
-    body: "What to practise, the daily goal, and a quick way to log the minutes.",
+    body: "What to practice, the daily goal, and a quick way to log the minutes.",
     shot: { name: "student-practice", label: "Student · Practice", alt: "A student's practice list with minutes logged each day" },
   },
   {
-    title: "Sheet music & recordings",
+    title: "Videos, music & sheet music",
     body: "Everything you've shared, in one place, opened right on their phone.",
-    shot: { name: "student-files", label: "Student · Files", alt: "Sheet music and recordings shared with a student" },
+    shot: { name: "student-files", label: "Student · Files", alt: "Videos, recordings and sheet music shared with a student" },
   },
   {
     title: "Pay in a tap",

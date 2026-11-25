@@ -1,4 +1,4 @@
-import { MdCalendarMonth, MdFamilyRestroom, MdQueueMusic, MdPayments, MdHandshake, MdForum, MdCheck } from "react-icons/md";
+import { MdAttachFile, MdCalendarMonth, MdFamilyRestroom, MdQueueMusic, MdPayments, MdHandshake, MdForum, MdCheck } from "react-icons/md";
 import { LandscapePhoneFrame, PhoneFrame } from "./Frames";
 import Reveal from "./Reveal";
 import Screen from "./Screen";
@@ -7,6 +7,21 @@ import SectionHeading from "./SectionHeading";
 // Each claim here matches something the app does today. Keep it that way:
 // a feature that's only planned belongs in the FAQ as "coming", not here.
 const FEATURES = [
+  {
+    icon: MdAttachFile,
+    label: "Videos, music & sheet music",
+    title: "Everything they need, right where they practice",
+    body: "Upload your demo videos, play-along tracks and sheet music, and attach them to the exact piece or scale you've set. Students open it straight from that practice item, so there's nothing to search for in emails or chats.",
+    points: [
+      "Videos, recordings, PDFs and images, straight from your phone or computer",
+      "Upload while you set the practice, or reuse files from your own library",
+      "Share with one student or a whole class in a couple of taps",
+    ],
+    pair: [
+      { caption: "You attach it", name: "files-attach", label: "Teacher · Practice item with files", alt: "A teacher adding a demo video, a play-along and sheet music to a practice item in MusiOS" },
+      { caption: "They open it", name: "files-open", label: "Student · Practice item, Files", alt: "A student opening the video, play-along and sheet music from that practice item" },
+    ],
+  },
   {
     icon: MdCalendarMonth,
     label: "Schedule & students",
@@ -33,7 +48,7 @@ const FEATURES = [
     label: "Practice",
     title: "Practice that actually happens",
     body: "Assign this week's pieces and scales with a daily goal. Students log their reps on their phone, and you can see who's on track before the lesson, not during it.",
-    points: ["On track or behind, for every student and class", "Attach sheet music and recordings", "A shared library of your files"],
+    points: ["On track or behind, for every student and class", "Set work for one student or a whole class", "Spot who has nothing assigned yet"],
     shot: { name: "practice", label: "Teacher · Practice roster", alt: "The practice overview showing which students are on track this week" },
   },
   {
@@ -96,9 +111,25 @@ const Features = () => (
                 </ul>
               </div>
               <div className="flex flex-col items-center rounded-[2rem] bg-gradient-to-br from-brand-soft to-indigo-50 px-6 py-12">
-                <PhoneFrame className="w-[230px] sm:w-[250px]">
-                  <Screen {...f.shot} sizes="250px" />
-                </PhoneFrame>
+                {"shot" in f && f.shot && (
+                  <PhoneFrame className="w-[230px] sm:w-[250px]">
+                    <Screen {...f.shot} sizes="250px" />
+                  </PhoneFrame>
+                )}
+                {/* Both sides of one thing: the teacher's screen and the student's.
+                    Side by side only where each phone stays readable. */}
+                {"pair" in f && f.pair && (
+                  <div className="grid w-full max-w-[470px] justify-items-center gap-10 sm:grid-cols-2 sm:gap-5 md:grid-cols-1 md:gap-10 lg:grid-cols-2 lg:gap-4">
+                    {f.pair.map(({ caption, ...shot }) => (
+                      <div key={caption}>
+                        <PhoneFrame className="w-[230px] sm:w-[220px] md:w-[240px] lg:w-[190px] xl:w-[215px]">
+                          <Screen {...shot} sizes="240px" />
+                        </PhoneFrame>
+                        <p className="mt-4 text-center text-sm font-semibold text-ink">{caption}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 {/* Overlaps the empty end of the day above it. */}
                 {"wide" in f && f.wide && (
                   <LandscapePhoneFrame className="z-10 -mt-24 max-w-[440px] sm:-mt-28">

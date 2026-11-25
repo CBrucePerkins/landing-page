@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "What is MusiOS?",
     answer:
-      "MusiOS is an app for music teachers that brings scheduling, practice tracking, messaging and payments into one place, on your phone and on the web. Your students sign in to the same app to see what to practise, open the files you share and pay you.",
+      "MusiOS is an app for music teachers that brings scheduling, practice tracking, messaging and payments into one place, on your phone and on the web. Your students sign in to the same app to see what to practice, open the files you share and pay you.",
   },
   {
     question: "When can I start using it?",
