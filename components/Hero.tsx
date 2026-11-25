@@ -2,6 +2,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { PhoneFrame } from "./Frames";
 import Screen from "./Screen";
 import WaitlistButton from "./WaitlistButton";
+import { BETA_START } from "@/lib/beta";
 
 const Hero = () => (
   <section id="top" className="relative overflow-hidden bg-gradient-to-b from-brand-soft via-white to-white">
@@ -10,7 +11,7 @@ const Hero = () => (
     <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 pb-20 pt-12 md:grid-cols-[1.1fr_1fr] md:pt-20 lg:pb-28">
       <div>
         <p className="inline-flex rounded-full border border-brand/15 bg-white px-3 py-1 text-sm font-medium text-brand shadow-sm">
-          For music teachers · Closed beta
+          For music teachers · Closed beta starts {BETA_START}
         </p>
         <h1 className="mt-5 text-5xl font-black tracking-tight text-ink [text-wrap:balance] sm:text-6xl lg:text-7xl">
           Teach music, not admin.

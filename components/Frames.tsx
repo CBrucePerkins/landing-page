@@ -14,6 +14,18 @@ export function PhoneFrame({ children, className, onDark = false }: { children: 
   );
 }
 
+// The same phone turned sideways, for a landscape simulator screenshot
+// (2868 x 1320).
+export function LandscapePhoneFrame({ children, className }: { children: React.ReactNode; className?: string }) {
+  return (
+    <div className={twMerge("relative w-full", className)}>
+      <div className="rounded-[1.6rem] bg-neutral-900 p-[7px] shadow-[0_40px_70px_-30px_rgba(0,30,128,0.55)] ring-1 ring-black/10">
+        <div className="relative aspect-[2868/1320] overflow-hidden rounded-[1.2rem] bg-white">{children}</div>
+      </div>
+    </div>
+  );
+}
+
 export function BrowserFrame({ children, className, url = "musios.io/app" }: { children: React.ReactNode; className?: string; url?: string }) {
   return (
     <div className={twMerge("overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_40px_80px_-40px_rgba(0,30,128,0.5)]", className)}>

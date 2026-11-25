@@ -15,9 +15,9 @@ const VARIANTS = {
   dark: "bg-ink text-white hover:bg-black",
 };
 
-// Every sign-up button on the site opens the same waitlist dialog.
+// Every sign-up button on the site opens the same closed beta dialog.
 export default function WaitlistButton({
-  children = "Join the waitlist",
+  children = "Join the closed beta",
   size = "md",
   variant = "primary",
   className,

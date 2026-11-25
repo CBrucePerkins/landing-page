@@ -1,5 +1,5 @@
-import { MdCalendarMonth, MdQueueMusic, MdPayments, MdHandshake, MdForum, MdCheck } from "react-icons/md";
-import { PhoneFrame } from "./Frames";
+import { MdCalendarMonth, MdFamilyRestroom, MdQueueMusic, MdPayments, MdHandshake, MdForum, MdCheck } from "react-icons/md";
+import { LandscapePhoneFrame, PhoneFrame } from "./Frames";
 import Reveal from "./Reveal";
 import Screen from "./Screen";
 import SectionHeading from "./SectionHeading";
@@ -12,8 +12,21 @@ const FEATURES = [
     label: "Schedule & students",
     title: "See your week at a glance",
     body: "Every lesson and class on one calendar, with weekly lessons that repeat on their own. Add a student in seconds and invite them by email, text or QR code.",
-    points: ["Weekly lessons, classes and one-off events", "Drag a student into a class", "Syncs to your phone's calendar"],
+    points: ["My Week: all seven days on one timeline, wider when you turn your phone", "Drag a student into a class", "Syncs to your phone's calendar"],
     shot: { name: "schedule", label: "Teacher · Calendar day", alt: "A day of lessons and classes in the MusiOS calendar" },
+    wide: { name: "week", label: "Teacher · My Week, landscape", alt: "My Week on a phone held sideways, with every lesson from Monday to Sunday" },
+  },
+  {
+    icon: MdFamilyRestroom,
+    label: "Students & parents",
+    title: "For grown-ups, teens and little ones",
+    body: "Adults and teens manage their own lessons. For younger students, make a parent or guardian the main contact: they get the invitation, sign in with their own email, and handle payments and your studio policy.",
+    points: [
+      "Keep the student's details and the parent's apart",
+      "Add more contacts, and choose what each one gets by email",
+      "Children can sign in too, for practice, files and messages",
+    ],
+    shot: { name: "guardian", label: "Teacher · Student profile with a main contact", alt: "A student's profile in MusiOS, with their father as the main contact" },
   },
   {
     icon: MdQueueMusic,
@@ -47,9 +60,9 @@ const FEATURES = [
     icon: MdForum,
     label: "Messages",
     title: "Reach everyone in seconds",
-    body: "Message a student, a class or your whole studio, in the app and by email. Need to text? Send from your own phone, one student after another, without copying numbers.",
-    points: ["See who got it, and resend any email that failed", "Texts come from your number, sent individually", "One history of everything you've sent"],
-    shot: { name: "messages", label: "Teacher · Messages", alt: "Sent messages with delivery status in MusiOS" },
+    body: "Message a student, their parents, a class or your whole studio, in the app and by email. Need to text? Send from your own phone, one student after another, without copying numbers.",
+    points: ["See who got it, and resend any email that failed", "Texts come from your number, sent individually", "Everything you've sent, person by person"],
+    shot: { name: "messages", label: "Teacher · Messages, one student", alt: "Messages sent to one student and their parent in MusiOS, with who got each one" },
   },
 ];
 
@@ -82,10 +95,16 @@ const Features = () => (
                   ))}
                 </ul>
               </div>
-              <div className="flex justify-center rounded-[2rem] bg-gradient-to-br from-brand-soft to-indigo-50 px-6 py-12">
+              <div className="flex flex-col items-center rounded-[2rem] bg-gradient-to-br from-brand-soft to-indigo-50 px-6 py-12">
                 <PhoneFrame className="w-[230px] sm:w-[250px]">
                   <Screen {...f.shot} sizes="250px" />
                 </PhoneFrame>
+                {/* Overlaps the empty end of the day above it. */}
+                {"wide" in f && f.wide && (
+                  <LandscapePhoneFrame className="z-10 -mt-24 max-w-[440px] sm:-mt-28">
+                    <Screen {...f.wide} sizes="440px" />
+                  </LandscapePhoneFrame>
+                )}
               </div>
             </div>
           </Reveal>

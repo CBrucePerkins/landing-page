@@ -1,5 +1,6 @@
 import Reveal from "./Reveal";
 import WaitlistButton from "./WaitlistButton";
+import { BETA_START } from "@/lib/beta";
 
 const CTA = () => (
   <section id="join" className="bg-white px-5 pb-24 sm:pb-28">
@@ -10,7 +11,7 @@ const CTA = () => (
           Spend your time on the music.
         </h2>
         <p className="relative mx-auto mt-4 max-w-xl text-lg text-indigo-100/85">
-          MusiOS opens to new teachers soon. Join the waitlist and you&apos;ll be the first to know.
+          Closed beta testing begins in {BETA_START}. Sign up now and we&apos;ll email you before it starts.
         </p>
         <WaitlistButton size="lg" variant="light" className="relative mt-8" />
         <p className="relative mt-4 text-sm text-indigo-100/70">Free trial with up to 4 students and 1 class. No time limit.</p>

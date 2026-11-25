@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { BETA_START } from "@/lib/beta";
 
 interface Props {
   isOpen: boolean;
@@ -82,18 +83,18 @@ const handleSubmit = async (e: React.FormEvent) => {
               <>
                 {/* Header */}
                 <h2 className="text-3xl font-bold text-center bg-gradient-to-b from-black to-[#002499] bg-clip-text text-transparent">
-                  MusiOS is launching soon
+                  Join the closed beta
                 </h2>
 
                 {/* Copy */}
                 <p className="mt-4 text-center text-gray-700 text-lg">
-                  We’re putting the finishing touches on MusiOS — a modern
-                  platform for music teachers to manage students, lessons,
-                  practice, and payments all in one place.
+                  Testing begins in <strong>{BETA_START}</strong>. Be one of the
+                  first music teachers to manage students, lessons, practice
+                  and payments with MusiOS.
                 </p>
 
                 <p className="mt-3 text-center text-gray-700">
-                  Join the waitlist and be the first to know when we go live.
+                  Sign up and we’ll email you with the next steps before it starts.
                 </p>
 
                 {/* Form */}
@@ -130,11 +131,11 @@ const handleSubmit = async (e: React.FormEvent) => {
                       disabled:opacity-50
                     "
                   >
-                    {loading ? "Joining…" : "Join the waitlist"}
+                    {loading ? "Signing up…" : "Sign up for the closed beta"}
                   </button>
 
                   <p className="text-center text-sm text-gray-500">
-                    By joining, you agree to our{" "}
+                    By signing up, you agree to our{" "}
                     <Link href="/privacy" className="underline hover:text-gray-700">
                       Privacy Policy
                     </Link>
@@ -146,10 +147,10 @@ const handleSubmit = async (e: React.FormEvent) => {
               /* Success */
               <div className="text-center py-10">
                 <h3 className="text-2xl font-bold mb-3">
-                  You’re on the list 🎉
+                  You’re signed up 🎉
                 </h3>
                 <p className="text-gray-700 text-lg">
-                  We’ll let you know as soon as MusiOS is ready.
+                  Closed beta testing begins in {BETA_START}. We’ll email you with the next steps before it starts.
                 </p>
               </div>
             )}

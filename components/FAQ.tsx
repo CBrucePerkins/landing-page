@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
+import { BETA_START } from "@/lib/beta";
 
 // Answers describe the app as it is today. Also used on /support.
 const faqs = [
@@ -14,7 +15,7 @@ const faqs = [
   {
     question: "When can I start using it?",
     answer:
-      "MusiOS is in a closed beta right now. Join the waitlist and we'll email you as soon as it opens to new teachers.",
+      `Closed beta testing begins in ${BETA_START}. Sign up for the closed beta and we'll email you with the next steps before it starts.`,
   },
   {
     question: "How much does it cost?",

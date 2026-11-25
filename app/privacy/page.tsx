@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <LegalLayout title="Privacy Policy" lastUpdated="August 26, 2026">
+    <LegalLayout title="Privacy Policy" lastUpdated="November 25, 2026">
       <>
         <p>
           MusiOS is operated by <strong>Perkins Consult ApS</strong>, a
@@ -31,14 +31,14 @@ export default function PrivacyPolicy() {
         <h2>1. Who this applies to</h2>
         <p>
           This policy covers everyone who interacts with musios.io or the
-          MusiOS app: visitors joining our waitlist, teachers who sign up for
+          MusiOS app: visitors signing up for our closed beta, teachers who sign up for
           an account (&ldquo;Teachers&rdquo;), and — indirectly — the
           students Teachers manage inside the app (&ldquo;Students&rdquo;).
         </p>
 
         <h2>2. What we collect</h2>
         <p>
-          <strong>If you join the waitlist:</strong> just your email address,
+          <strong>If you sign up for the closed beta:</strong> just your email address,
           submitted through the sign-up form on this site.
         </p>
         <p>
@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
             for (contract necessity).
           </li>
           <li>
-            <strong>To communicate with you</strong> — waitlist updates,
+            <strong>To communicate with you</strong> — closed beta updates,
             service notices, and support (consent, for marketing emails; you
             can unsubscribe anytime).
           </li>
@@ -117,7 +117,7 @@ export default function PrivacyPolicy() {
             the EU/EEA.
           </li>
           <li>
-            <strong>Google (waitlist only)</strong> — waitlist submissions
+            <strong>Google (closed beta sign-ups only)</strong> — sign-ups
             are currently stored via a Google Sheets integration.
           </li>
         </ul>
@@ -130,7 +130,8 @@ export default function PrivacyPolicy() {
 
         <h2>6. How long we keep it</h2>
         <p>
-          Waitlist emails are kept until launch or until you ask us to
+          Closed beta sign-up emails (and any from our earlier waitlist)
+          are kept until launch or until you ask us to
           remove them. Account and Student data is kept for as long as the
           account is active, plus a reasonable period afterward to satisfy
           legal, tax, and dispute-resolution obligations, after which it is

@@ -25,7 +25,7 @@ const Header = () => (
           </a>
         ))}
       </nav>
-      <WaitlistButton size="sm">Join the waitlist</WaitlistButton>
+      <WaitlistButton size="sm" />
     </div>
   </header>
 );
