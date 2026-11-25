@@ -21,7 +21,7 @@ export default function SupportPage() {
           here, same reasoning as LegalLayout for Privacy/Terms. */}
       <header className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
         <Link href="/">
-          <Image src={Logo} alt="MusiOS" className="cursor-pointer" />
+          <Image src={Logo} alt="MusiOS" className="h-10 w-10 cursor-pointer" />
         </Link>
         <Link
           href="/"

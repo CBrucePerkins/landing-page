@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col items-center gap-6 bg-black text-white px-8 py-12 md:flex-row md:justify-between md:px-20 xl:px-44">
-      <Image src={Logo} alt="MusiOS" className="cursor-pointer" />
+      <Image src={Logo} alt="MusiOS" className="h-10 w-10 cursor-pointer" />
       <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-300/85">
         <Link href="/support" className="hover:text-white">
           Support

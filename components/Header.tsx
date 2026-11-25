@@ -15,7 +15,7 @@ const Header = () => (
   <header className="sticky top-0 z-30 border-b border-slate-200/70 bg-white/85 backdrop-blur-md">
     <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
       <a href="#top" className="flex items-center gap-2 text-lg font-extrabold tracking-tight text-ink">
-        <Image src={Logo} alt="" className="h-8 w-8" priority />
+        <Image src={Logo} alt="" className="h-9 w-9" priority />
         MusiOS
       </a>
       <nav aria-label="Main" className="hidden items-center gap-7 text-sm font-medium text-slate-600 md:flex">
