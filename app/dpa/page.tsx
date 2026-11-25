@@ -100,7 +100,7 @@ export default function DataProcessingAgreement() {
             <strong>Stripe</strong>, Ireland and USA: payments, if you take them through MusiOS. Stripe is also a controller of its own for parts of this.
           </li>
           <li>
-            <strong>GoDaddy</strong>, USA: hosts our support@musios.io mailbox, and so handles any student information you send us by email.
+            <strong>GoDaddy and Microsoft (Microsoft 365)</strong>, USA and Ireland: our support@musios.io mailbox, and so any student information you send us by email.
           </li>
         </ul>
 

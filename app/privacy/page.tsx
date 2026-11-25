@@ -120,7 +120,7 @@ export default function PrivacyPolicy() {
             <strong>Google</strong>{" "}(Ireland and USA): stores closed beta sign-ups in a spreadsheet. No student information.
           </li>
           <li>
-            <strong>GoDaddy</strong>{" "}(USA): hosts our support@musios.io mailbox, so it handles what you write to us by email.
+            <strong>Microsoft 365, provided through GoDaddy</strong>{" "}(Ireland and USA): our support@musios.io mailbox, so they handle what you write to us by email.
           </li>
         </ul>
 
