@@ -20,7 +20,7 @@ const faqs = [
   {
     question: "How much does it cost?",
     answer:
-      "You can try MusiOS for free with up to 4 students and 1 class, with no time limit and no card needed. When you're ready for more, a single Standard plan includes everything. We'll announce its price at launch.",
+      "You can try MusiOS for free with up to 5 students, with no time limit and no card needed. When you're ready for more, a single Standard plan includes everything. We'll announce its price at launch.",
   },
   {
     question: "Is there a mobile app?",

@@ -14,7 +14,7 @@ const CTA = () => (
           Closed beta testing begins in {BETA_START}. Sign up now and we&apos;ll email you before it starts.
         </p>
         <WaitlistButton size="lg" variant="light" className="relative mt-8" />
-        <p className="relative mt-4 text-sm text-indigo-100/70">Free trial with up to 4 students and 1 class. No time limit.</p>
+        <p className="relative mt-4 text-sm text-indigo-100/70">Free trial with up to 5 students. No time limit.</p>
       </div>
     </Reveal>
   </section>

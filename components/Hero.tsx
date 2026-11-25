@@ -26,7 +26,7 @@ const Hero = () => (
             See how it works <FaArrowRight className="h-3 w-3" aria-hidden />
           </a>
         </div>
-        <p className="mt-4 text-sm text-slate-500">Free trial with up to 4 students and 1 class. No time limit.</p>
+        <p className="mt-4 text-sm text-slate-500">Free trial with up to 5 students. No time limit.</p>
       </div>
 
       {/* One app, two sign-ins: the teacher's view in front, a student's behind it. */}

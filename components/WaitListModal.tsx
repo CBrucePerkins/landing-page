@@ -10,8 +10,13 @@ interface Props {
   onClose: () => void;
 }
 
+// Ranges rather than an exact number: quick to answer, and enough to see who
+// has the 10 or more students the beta is looking for.
+const STUDENT_RANGES = ["Fewer than 5", "5 to 9", "10 to 19", "20 to 39", "40 or more"];
+
 export default function WaitlistModal({ isOpen, onClose }: Props) {
   const [email, setEmail] = useState("");
+  const [students, setStudents] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -27,16 +32,21 @@ const handleSubmit = async (e: React.FormEvent) => {
       method: "POST",
       body: JSON.stringify({
         email,
+        students,
         source: "landing-page",
       }),
     });
 
-    if (!res.ok) {
-      throw new Error("Failed to submit");
+    // The sheet's script answers 200 even when it refuses a sign-up, with
+    // the reason in the body.
+    const result = await res.json().catch(() => null);
+    if (!res.ok || result?.status === "error") {
+      throw new Error(result?.message || "Failed to submit");
     }
 
     setSubmitted(true);
     setEmail("");
+    setStudents("");
   } catch (err) {
     console.error(err);
     alert("Something went wrong. Please try again.");
@@ -67,7 +77,8 @@ const handleSubmit = async (e: React.FormEvent) => {
               bg-white/80 backdrop-blur-xl
               border border-white/30
               shadow-2xl
-              p-8
+              max-h-[calc(100dvh-2rem)] overflow-y-auto
+              p-6 sm:p-8
               relative
             "
           >
@@ -82,12 +93,12 @@ const handleSubmit = async (e: React.FormEvent) => {
             {!submitted ? (
               <>
                 {/* Header */}
-                <h2 className="text-3xl font-bold text-center bg-gradient-to-b from-black to-[#002499] bg-clip-text text-transparent">
+                <h2 className="text-2xl sm:text-3xl font-bold text-center bg-gradient-to-b from-black to-[#002499] bg-clip-text text-transparent">
                   Join the closed beta
                 </h2>
 
                 {/* Copy */}
-                <p className="mt-4 text-center text-gray-700 text-lg">
+                <p className="mt-3 sm:mt-4 text-center text-gray-700 sm:text-lg">
                   Testing begins in <strong>{BETA_START}</strong>. Be one of the
                   first music teachers to manage students, lessons, practice
                   and payments with MusiOS.
@@ -103,6 +114,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                     type="email"
                     required
                     placeholder="Enter your email"
+                    aria-label="Your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="
@@ -114,6 +126,33 @@ const handleSubmit = async (e: React.FormEvent) => {
                       focus:outline-none focus:ring-2 focus:ring-[#002499]
                     "
                   />
+
+                  <div>
+                    <label htmlFor="beta-students" className="block mb-1.5 font-medium text-gray-700">
+                      How many students do you teach?
+                    </label>
+                    <select
+                      id="beta-students"
+                      required
+                      value={students}
+                      onChange={(e) => setStudents(e.target.value)}
+                      className={`
+                        w-full
+                        rounded-lg
+                        border border-gray-300
+                        bg-white
+                        px-4 py-3
+                        text-lg
+                        focus:outline-none focus:ring-2 focus:ring-[#002499]
+                        ${students ? "text-black" : "text-gray-500"}
+                      `}
+                    >
+                      <option value="" disabled>Choose one</option>
+                      {STUDENT_RANGES.map((r) => (
+                        <option key={r} value={r}>{r}</option>
+                      ))}
+                    </select>
+                  </div>
 
                   <button
                     type="submit"

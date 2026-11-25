@@ -11,7 +11,7 @@ const PLANS = [
     name: "Free trial",
     price: "Free",
     note: "No time limit, no card needed",
-    points: ["Up to 4 students", "1 class", "Scheduling, practice and files", "Student logins included"],
+    points: ["Up to 5 students", "Scheduling, practice and files", "100 MB of file storage", "Student logins included"],
     style: "light",
   },
   {
@@ -20,9 +20,9 @@ const PLANS = [
     note: "One plan with everything",
     badge: "Everything included",
     points: [
-      "Students and classes",
+      "Up to 30 students, plus classes",
       "Scheduling with calendar sync",
-      "Practice tracking and a file library",
+      "Practice tracking and 1 GB of file storage",
       "Card payments with reminders",
       "A studio policy your students accept",
       "App and email messages, plus texting from your phone",
@@ -44,7 +44,7 @@ const Pricing = () => (
     <div className="mx-auto max-w-6xl px-5">
       <Reveal>
         <SectionHeading eyebrow="Pricing" title="Try it free. Upgrade when you're ready.">
-          Start with up to 4 students and a class, for as long as you like. When your studio moves in, one plan covers
+          Start with up to 5 students, for as long as you like. When your studio moves in, one plan covers
           everything.
         </SectionHeading>
       </Reveal>
