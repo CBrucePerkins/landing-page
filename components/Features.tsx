@@ -11,10 +11,10 @@ const FEATURES = [
     icon: MdAttachFile,
     label: "Videos, music & sheet music",
     title: "Everything they need, right where they practice",
-    body: "Upload your demo videos, play-along tracks and sheet music, and attach them to the exact piece or scale you've set. Students open it straight from that practice item, so there's nothing to search for in emails or chats.",
+    body: "Upload your demo videos, play-along tracks and sheet music, and attach them to the exact piece or scale you've assigned. Students open it straight from that practice item, so there's nothing to search for in emails or chats.",
     points: [
       "Videos, recordings, PDFs and images, straight from your phone or computer",
-      "Upload while you set the practice, or reuse files from your own library",
+      "Upload while you assign the material, or reuse files from your own library",
       "Share with one student or a whole class in a couple of taps",
     ],
     pair: [
