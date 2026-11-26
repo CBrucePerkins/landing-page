@@ -4,7 +4,9 @@ import Image from "next/image";
 
 // One screenshot or screen recording slot. It looks for files in
 // public/assets/landing/ at build time, so new captures are a drop-in:
-//   <name>.mp4 (+ <name>.jpg as its poster)  -> looping, muted video
+//   <name>.mp4 (+ <name>.jpg/.webp/.png as its poster) -> looping, muted
+//                                            video (the poster alone for
+//                                            people who ask for reduced motion)
 //   <name>.webp / .png / .jpg                -> still image
 //   nothing yet                              -> a labelled placeholder
 // Server component on purpose: the file check happens once when the page is
@@ -27,9 +29,15 @@ export default function Screen({ name, alt, label, priority = false, sizes = "30
 
   if (find(name, ["mp4"])) {
     const poster = find(name, ["jpg", "webp", "png"]);
+    // People who ask for reduced motion get the still image instead of a
+    // looping video.
     return (
+      <>
+        {poster && (
+          <Image src={url(poster)} alt={alt} fill sizes={sizes} priority={priority} className="hidden object-cover object-top motion-reduce:block" />
+        )}
       <video
-        className="absolute inset-0 h-full w-full object-cover object-top"
+        className="absolute inset-0 h-full w-full object-cover object-top motion-reduce:hidden"
         src={url("mp4")}
         poster={poster ? url(poster) : undefined}
         autoPlay
@@ -39,6 +47,7 @@ export default function Screen({ name, alt, label, priority = false, sizes = "30
         preload={priority ? "auto" : "metadata"}
         aria-label={alt}
       />
+      </>
     );
   }
 
