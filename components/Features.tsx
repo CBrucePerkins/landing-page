@@ -70,6 +70,7 @@ const FEATURES = [
       "Every acceptance on record, with a copy emailed to both of you",
     ],
     shot: { name: "policy", label: "Teacher · Studio policy, Acceptance", alt: "Who has accepted the studio policy and who hasn't yet, in MusiOS" },
+    link: { href: "/studio-policy-template", label: "Get the free studio policy template" },
   },
   {
     icon: MdForum,
@@ -109,6 +110,11 @@ const Features = () => (
                     </li>
                   ))}
                 </ul>
+                {"link" in f && f.link && (
+                  <a href={f.link.href} className="mt-6 inline-flex items-center gap-2 font-semibold text-brand underline-offset-4 hover:underline">
+                    {f.link.label} <span aria-hidden>→</span>
+                  </a>
+                )}
               </div>
               <div className="flex flex-col items-center rounded-[2rem] bg-gradient-to-br from-brand-soft to-indigo-50 px-6 py-12">
                 {"shot" in f && f.shot && (
